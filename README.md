@@ -1,4 +1,4 @@
-## Sinatra/Padrino App for Frontend developers
+## Sinatra/Padrino App for Frontend developers 
 
 Use HAML, SASS and Coffee Script for frontend development right now!
 
