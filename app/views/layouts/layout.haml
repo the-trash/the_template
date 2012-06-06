@@ -1,0 +1,18 @@
+!!! 5
+%html
+  %head
+    %meta{ charset: 'utf-8' }
+    %title Markup Template
+
+    = javascript_include_tag 'jquery'
+    = javascript_include_tag 'jquery-ui'
+    = javascript_include_tag 'application'
+
+    = stylesheet_link_tag 'reset'
+    = stylesheet_link_tag 'headers'
+    = stylesheet_link_tag 'custom'
+
+    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'style'
+  %body
+    = yield

@@ -1,0 +1,8 @@
+- if is_mail
+  %p I should have frank on Email
+  - options = { :style => 'border:3px solid red', :class => 'frank', :title => 'hello from Frank' }
+  = email_image 'sinatra.png', options, is_mail
+- else
+  %p I should have frank on Screen
+  - options = { :style => 'border:3px solid red', :class => 'frank', :title => 'hello from Frank' }
+  = email_image 'sinatra.png', options, is_mail

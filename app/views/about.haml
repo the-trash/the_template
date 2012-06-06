@@ -1,0 +1,12 @@
+.about
+  %h1 About
+  %p= name
+  %p= image_tag 'sinatra.png'
+
+  %p
+    = link_to 'github.com/the-teacher', 'https://github.com/the-teacher'
+    = link_to 'root', '/'
+    = link_to 'about', '/about'
+
+  - 10.times do
+    %p= partial 'partials/test', :locals => { :hello_variable => :test }
