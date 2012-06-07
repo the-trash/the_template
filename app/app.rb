@@ -88,7 +88,7 @@ class MarkupTemplate < Padrino::Application
 
   get '/stylesheets/:name.css' do
     content_type 'text/css', charset: 'utf-8'
-    scss :"../../public/stylesheets/scss/#{params[:name]}"
+    scss :"../../public/stylesheets/scss/#{params[:name]}", :style => :expanded
   end
 
 end
