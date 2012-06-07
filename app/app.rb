@@ -72,7 +72,6 @@ class MarkupTemplate < Padrino::Application
 
       @@attachments.each_with_index do |name, index|
         add_file :filename => name, :content => File.read(@@img_path + name)
-        # self.attachments[index].body = Base64.encode64(File.open(@@img_path + name).read)
         self.attachments[index].content_id = "<#{name}>"
       end
     end
