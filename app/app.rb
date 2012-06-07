@@ -81,12 +81,14 @@ class MarkupTemplate < Padrino::Application
 
   # Routes to COFFEE-JS and SCSS-CSS
   get '/javascripts/:name.js' do
-    content_type 'text/javascript', charset: 'utf-8'
+    content_type 'text/javascript'
+    charset 'utf-8'
     coffee :"../../public/javascripts/coffee/#{params[:name]}"
   end
 
   get '/stylesheets/:name.css' do
-    content_type 'text/css', charset: 'utf-8'
+    content_type 'text/css'
+    charset 'utf-8'
     scss :"../../public/stylesheets/scss/#{params[:name]}", :style => :expanded
   end
 
