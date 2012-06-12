@@ -7,25 +7,6 @@ require 'rubygems' unless defined?(Gem)
 require 'bundler/setup'
 Bundler.require(:default, PADRINO_ENV)
 
-# Tilt MonkeyPatch
-module Tilt
-  class HamlTemplate
-    def prepare
-      @data.force_encoding Encoding.default_external
-      options = @options.merge(:filename => eval_file, :line => line)
-      @engine = ::Haml::Engine.new(data, options)
-    end
-  end
-  class CoffeeScriptTemplate
-    def prepare
-      @data.force_encoding Encoding.default_external
-      if !options.key?(:bare) and !options.key?(:no_wrap)
-        options[:bare] = self.class.default_bare
-      end
-    end
-  end
-end
-
 ##
 # Enable devel logging
 #
