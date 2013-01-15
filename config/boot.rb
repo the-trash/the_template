@@ -11,8 +11,8 @@ Bundler.require(:default, PADRINO_ENV)
 # Enable devel logging
 #
 # Padrino::Logger::Config[:development][:log_level]  = :devel
-# Padrino::Logger::Config[:development][:log_static] = true
-#
+# Padrino::Logger::Config[:development][:log_static] = false
+# Padrino::Logger::Config[:development][:stream] = :to_file
 
 # Tilt monkey patch for Ru text
 module Tilt

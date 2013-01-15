@@ -1,0 +1,14 @@
+.index, .about {
+  width: 800px;
+  margin: auto;
+  padding-top: 30px;
+}
+.index .part, .about .part {
+  margin-bottom: 30px;
+}
+.index .part p, .about .part p {
+  font-size: 1.6em;
+}
+.index .part a, .about .part a {
+  font-size: 1.5em;
+}

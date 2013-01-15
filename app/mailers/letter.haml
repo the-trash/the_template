@@ -1,13 +1,9 @@
-.index
-  .part
-    %p= link_to '<= index page', '/'
+- @is_mail = is_mail
+- partial '../mailers/styles'
 
-  .part
-    - if is_mail
-      %p I should have frank on Email
-      - options = { :style => 'border:3px solid red', :class => 'frank', :title => 'hello from Frank' }
-      = email_image 'sinatra.png', options, is_mail
-    - else
-      %p I should have frank on Screen
-      - options = { :style => 'border:3px solid red', :class => 'frank', :title => 'hello from Frank' }
-      = email_image 'sinatra.png', options, is_mail
+-# zykin-ilya@ya.ru
+-# Base64.decode64 "enlraW4taWx5YUBuYXJvZC5ydQ="
+
+=# partial '../mailers/hstore/letter'
+= partial '../mailers/ae_project/letter'
+=# partial '../mailers/ae_project_new_year/letter'

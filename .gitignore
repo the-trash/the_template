@@ -1,5 +1,4 @@
 .DS_Store
-log/**/*
 tmp/**/*
 bin/*
 vendor/gems/*
@@ -7,4 +6,6 @@ vendor/gems/*
 .sass-cache/*
 .sass-cache
 Gemfile.lock
+lib/mail_settings.rb
 .rvmrc
+log

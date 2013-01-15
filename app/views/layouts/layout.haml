@@ -6,13 +6,13 @@
 
     = javascript_include_tag 'jquery'
     = javascript_include_tag 'jquery-ui'
-    = javascript_include_tag 'application'
+    = javascript_include_tag 'app/application'
 
-    = stylesheet_link_tag 'reset'
-    = stylesheet_link_tag 'headers'
-    = stylesheet_link_tag 'custom'
+    = stylesheet_link_tag 'base/reset'
+    = stylesheet_link_tag 'base/headers'
+    = stylesheet_link_tag 'base/custom'
 
-    = stylesheet_link_tag 'application'
-    = stylesheet_link_tag 'style'
+    = stylesheet_link_tag 'app/application'
+    = stylesheet_link_tag 'app/style'
   %body
     = yield

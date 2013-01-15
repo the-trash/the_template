@@ -1,0 +1,223 @@
+/*
+  zykin-ilya@ya.ru
+  github.com/the-teacher
+  Last modified: 15 jan 2013
+
+  GLOBAL font-size: 10px; (aka 62.5%)
+  provide identity of:
+  10px => 1em   => 100%
+  15px => 1.5em => 150%
+  18px => 1.8em => 180%
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* all block elements */
+article, aside, details, figcaption, figure, footer, header, hgroup,
+menu, nav, section, html, head, body, address, blockquote, center, dir,
+div, dl, fieldset, form, h1, h2, h3, h4, h5, h6, hr, isindex, menu, noframes, noscript,
+ol, p, pre, table, ul {
+  border: 0;
+  outline: 0;
+  font-size: 10px;
+  line-height: 100%;
+  background: transparent;
+  vertical-align: baseline;
+}
+
+html {
+  background: white;
+}
+
+/* HTML5 INIT (experimental section) */
+article, aside, details, figcaption, figure, footer,
+header, hgroup, menu, nav, section {
+  display: block;
+}
+
+canvas, video, audio[controls] {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+audio {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+mark {
+  background: yellow;
+  padding: 0 5px;
+}
+
+/* TABLES */
+table, tr, th, td {
+  border-collapse: collapse;
+  vertical-align: top;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+}
+
+img {
+  vertical-align: top;
+}
+
+/* IE a > img fix*/
+a img {
+  border: none;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  outline: 0;
+}
+
+sup, sub {
+  font-size: 85%;
+  zoom: 1;
+}
+
+sup {
+  vertical-align: 40%;
+}
+
+sub {
+  vertical-align: -40%;
+}
+
+noscript {
+  background: red;
+  font-size: 2em;
+  padding: 5px;
+  color: white;
+}
+
+/* LIST */
+ol, ul {
+  list-style: none;
+  margin: 0;
+}
+
+li {
+  list-style-position: outside;
+}
+
+.numered_list, .marked_list {
+  margin-left: 20px;
+}
+
+.numered_list li, .marked_list li {
+  list-style-position: outside;
+  margin-left: 15px;
+  padding-left: 5px;
+}
+
+.numered_list li {
+  list-style-type: decimal;
+}
+
+.marked_list li {
+  list-style-type: disc;
+}
+
+/* Unbreakable */
+.nobr {
+  font-size: inherit;
+  white-space: nowrap;
+}
+
+/* placeholders fix */
+:-moz-placeholder {
+  color: #999999 !important;
+}
+
+:-ms-input-placeholder {
+  color: #999999 !important;
+}
+
+/* WebKit fixes */
+::-webkit-input-placeholder {
+  color: #999;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+/* CUSTOM */
+p {
+  line-height: 100%;
+}
+
+label {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+  height: 0;
+}
+
+.visible {
+  visibility: visible;
+  height: auto;
+}
+
+:focus {
+  outline: 0;
+}
+
+.u {
+  text-decoration: underline;
+}
+
+.overblock {
+  overflow: hidden;
+  zoom: 1;
+}
+
+.indicator, .stop_indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+}
+
+/* hidden input text, for custom calendars fields */
+.zeropoint {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  height: 0px !important;
+  width: 1px !important;
+  opacity: 0 !important;
+  border: 0 !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /*
+    .ANY_CLASS{ any_property: x; }
+    .test { display: inline-table; }
+  */
+}

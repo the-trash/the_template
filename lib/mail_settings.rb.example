@@ -1,0 +1,9 @@
+MAIL_SETTINGS = { 
+  :address              => "mysite.com",
+  :port                 => 25,
+  :domain               => 'mysite.com',
+  :user_name            => 'robot@mysite.com',
+  :password             => 'PaSswoRd',
+  :authentication       => :plain,
+  :enable_starttls_auto => true
+}

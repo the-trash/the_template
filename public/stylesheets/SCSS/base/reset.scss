@@ -1,7 +1,7 @@
 /*
   zykin-ilya@ya.ru
   github.com/the-teacher
-  Last modified: 19 mar 2012
+  Last modified: 15 jan 2013
 
   GLOBAL font-size: 10px; (aka 62.5%)
   provide identity of:
@@ -32,15 +32,16 @@ article, aside, details, figcaption, figure, footer,
 header, hgroup, menu, nav, section{
   display: block
 }
+
 canvas, video, audio[controls]{
   display: inline-block;
   *display: inline;
   zoom: 1
 }
+
 audio{ display: none }
 [hidden]{ display: none }
 mark{ background: yellow; padding: 0 5px }
-/* HTML5 INIT */
 
 /* TABLES */
 table, tr, th, td{
@@ -49,14 +50,11 @@ table, tr, th, td{
   border-spacing: 0
 }
 th{ font-weight: bold }
-/* TABLES */
 
-/* LIST */
-ol, ul{ list-style: none; margin: 0 }
-li{ list-style-position: outside }
-/* LIST */
+img{ vertical-align: top; }
 
-img{ vertical-align: top }
+/* IE a > img fix*/
+a img{ border: none; }
 
 a{ text-decoration: underline  }
 a:hover{ text-decoration: none }
@@ -73,9 +71,9 @@ noscript{
   color: white
 }
 
-/* CUSTOM */
-p{ line-height: 1.35em }
-label{ display: block }
+/* LIST */
+ol, ul{ list-style: none; margin: 0 }
+li{ list-style-position: outside }
 
 .numered_list, .marked_list{ margin-left: 20px }
 .numered_list li, .marked_list li{
@@ -86,20 +84,27 @@ label{ display: block }
 .numered_list li{ list-style-type: decimal }
 .marked_list  li{ list-style-type: disc }
 
+/* Unbreakable */
+.nobr{
+  font-size: inherit;
+  white-space: nowrap
+}
+
+/* placeholders fix */
+:-moz-placeholder      { color: #999 !important; }
+:-ms-input-placeholder { color: #999 !important; }
+
+/* WebKit fixes */
+::-webkit-input-placeholder { color: #999; }
+input:focus::-webkit-input-placeholder{ color: transparent; }
+
+/* CUSTOM */
+p{ line-height: 100% }
+label{ display: block }
+
 .hidden   { display: none }
 .invisible{ visibility: hidden;  height: 0 }
 .visible  { visibility: visible; height: auto }
-
-/* Unbreakable */
-.nobr{ white-space: nowrap }
-
-/* For sliders building */
-.nobr_item{
-  display: inline-block;
-  vertical-align: top;
-  *display: inline;
-  zoom: 1
-}
 
 :focus{ outline: 0 }
 .u{ text-decoration: underline }
@@ -111,7 +116,20 @@ label{ display: block }
   display: none
 }
 
-/* WebKit fixes */
+/* hidden input text, for custom calendars fields */
+.zeropoint{
+  position: absolute !important;
+  top: 0px; left: 0px;
+
+  height:  0px !important;
+  width:   1px !important;
+  opacity: 0 !important;
+  border:  0 !important;
+}
+
 @media screen and (-webkit-min-device-pixel-ratio:0){
-  /* display: inline-table; */
+  /*
+    .ANY_CLASS{ any_property: x; }
+    .test { display: inline-table; }
+  */
 }

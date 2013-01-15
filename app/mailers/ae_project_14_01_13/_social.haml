@@ -1,0 +1,16 @@
+%table{ table, width: '100%',  style: mb15 + text_right, align: :right }
+  %tr
+    %td{ td, width: '50%' }
+
+    %td{ td }
+      = link_to 'http://www.facebook.com/?ref=home#!/pages/Art-Electronics/147583648606014', style: iblock do
+        = email_image 'ae_project/base/fb.jpg', {}, @is_mail
+    %td{ td }
+      = link_to 'http://vkontakte.ru/club19732984', style: iblock do
+        = email_image 'ae_project/base/vk.jpg', {}, @is_mail
+    %td{ td }
+      = link_to 'http://artelectronicsf.livejournal.com', style: iblock do
+        = email_image 'ae_project/base/lj.jpg', {}, @is_mail
+    %td{ td }
+      = link_to 'http://twitter.com/ArtElectronicsF', style: iblock do
+        = email_image 'ae_project/base/tw.jpg', {}, @is_mail

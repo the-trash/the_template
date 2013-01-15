@@ -1,30 +1,35 @@
+# $KCODE = "UTF-8"
+# encoding: UTF-8
 # coding: UTF-8
 
 require 'sass'
+require 'base64'
+require 'compass'
 require 'coffee-script'
 
 class MarkupTemplate < Padrino::Application
-  register Padrino::Rendering
+  register Padrino::Flash
   register Padrino::Mailer
   register Padrino::Helpers
+  register Padrino::Rendering
+  register CompassInitializer
 
   layout :layout
 
-  set :delivery_method, :smtp => { 
-    :address              => "smtp.gmail.com",
-    :port                 => 587,
-    :user_name            => 'my.markup.template@gmail.com',
-    :password             => 'qwerty',
-    :authentication       => :plain,
-    :enable_starttls_auto => true  
-  }
+  begin
+    set :delivery_method, :smtp => MAIL_SETTINGS
+  rescue
+    puts " = ." * 15
+    puts " WARNING! Define MAIL_SETTINGS in lib/mail_settings.rb"
+    puts " = ." * 15
+  end
 
   helpers do
     def md5 str = ''
       Digest::MD5.hexdigest str.to_s
     end
 
-    def email_image name, options, is_mail = false
+    def email_image name, options = {}, is_mail = false
       return image_tag(name, options) unless is_mail
       options.merge!(:src => "cid:#{name}")
       tag :img, options
@@ -48,46 +53,123 @@ class MarkupTemplate < Padrino::Application
   end
 
   get '/mail/letter' do
-    haml :"../mailers/letter", :locals => { :is_mail => false }
+    @user_email =  Base64.encode64('test@test.com').chop.chop.chop
+    @user_email_flag = "?u=#{@user_email}"
+
+    haml :"../mailers/letter", :layout => :mailer, :locals => { :is_mail => false }
   end
 
   # SEND MAIL
   before '/mail/send' do
     @@img_path    = "#{Padrino.root}/public/images/"
-    @@attachments = [
-      'sinatra.png'
+    @@attachments = %w[
+      ae_project/base/ae.jpg
+
+      ae_project/base/vk.jpg
+      ae_project/base/tw.jpg
+      ae_project/base/fb.jpg
+      ae_project/base/lj.jpg
+
+      ae_project/post/1.png
+      ae_project/post/2.png
+      ae_project/post/3.png
+
+      ae_project/blog/1.png
+      ae_project/blog/2.jpg
+      ae_project/blog/3.jpg
+
+      ae_project/archive/1.png
+      ae_project/archive/2.png
+      ae_project/archive/3.png
     ]
+
+    # @@attachments = %w[
+    #   ae_base/new_year_header.jpg
+    #   ae_base/new_year_footer.jpg
+    # ]
+
+    # @@attachments = %w[
+    #   hstore/dots_long.gif
+    #   hstore/dots_short.gif
+      
+    #   hstore/fb.jpg
+    #   hstore/vk.jpg
+    #   hstore/tw.jpg
+    #   hstore/ig.jpg
+    #   hstore/fs.jpg
+
+    #   hstore/header.jpg
+    #   hstore/footer.gif
+    #   hstore/h-store.gif
+    #   hstore/yandex_vote.gif
+    # ]
   end
 
-  get '/mail/send' do
-    html_letter = haml(:"../mailers/letter", :locals => { :is_mail => true }, :layout => false)
+  post '/mail/send' do
+    addressers_1 = params[:emails].split(',').map(&:strip)
+    addressers_2 = params[:emails_str].split("\n").map(&:strip)
+    addressers = (addressers_1 + addressers_2).uniq
 
-    email do
-      from     'my.markup.template@gmail.com'
-      to       'my.markup.template@gmail.com'
-      subject  'Welcome!'
-      via      :smtp
-      provides :html
-      html_part html_letter
+    subject = params[:subject]
+    
+    # post@artelectronics.ru, killich@mail.ru, zykin-ilya@ya.ru, gkillich@gmail.com
 
-      @@attachments.each_with_index do |name, index|
-        add_file :filename => name, :content => File.read(@@img_path + name)
-        self.attachments[index].content_id = "<#{name}>"
+    # LOG FILES NAMES
+    log_name = "#{Padrino.root}/log/#{Time.new.strftime("%Y-%M-%d-%H-%M")}"
+    # LOGGING OPEN
+    log_success = File.open "#{log_name}.success.log", 'w+'
+    log_error   = File.open "#{log_name}.error.log",   'w+'
+    log_enotice = File.open "#{log_name}.enotice.log", 'w+'
+
+    addressers.each do |adresser|
+
+      @user_email =  Base64.encode64(adresser).chop.chop.chop
+      @user_email_flag = "?u=#{@user_email}"
+      html_letter = haml(:"../mailers/letter", :locals => { :is_mail => true }, :layout => false)
+
+      begin
+        email do
+          from     'robot@artelectronics.ru'
+          to       adresser
+          subject  subject
+          via      :smtp
+          provides :html
+          html_part html_letter
+
+          @@attachments.each_with_index do |name, index|
+            add_file :filename => name, :content => File.open(@@img_path + name, 'rb') { |f| f.read }
+            self.attachments[index].content_id = "<#{name}>"
+          end
+        end
+
+        log_success.puts adresser
+        sleep 45
+      rescue Exception => e
+        log_error.puts   adresser
+        log_enotice.puts "#{adresser} => #{e.message}"
       end
     end
-    
+
+    # LOGGING CLOSE
+    log_success.close
+    log_enotice.close
+    log_error.close
+
+    # FALASH
+    flash[:notice] = 'Posting is finish'
     redirect '/mail/letter'
   end
 
-  # Routes to COFFEE-JS and SCSS-CSS
-  get '/javascripts/:name.js' do
+  # Routes to COFFEE-JS
+  get '/javascripts/:folder/:name.js' do
     content_type 'text/javascript', :charset => 'utf-8'
-    coffee :"../../public/javascripts/coffee/#{params[:name]}"
+    coffee :"../../public/javascripts/COFFEE/#{params[:folder]}/#{params[:name]}"
   end
 
-  get '/stylesheets/:name.css' do
+  # Routes to SCSS-CSS
+  get '/stylesheets/:folder/:name.css' do
     content_type 'text/css', :charset => 'utf-8'
-    scss :"../../public/stylesheets/scss/#{params[:name]}", :style => :expanded
+    scss :"../../public/stylesheets/SCSS/#{params[:folder]}/#{params[:name]}"
   end
 
 end
