@@ -14,5 +14,10 @@
 
     = stylesheet_link_tag 'app/application'
     = stylesheet_link_tag 'app/style'
+
+    -# App CSS
+    = yield_content :js
+    = yield_content :css
+
   %body
     = yield

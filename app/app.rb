@@ -48,6 +48,10 @@ class MarkupTemplate < Padrino::Application
     haml :index
   end
 
+  get '/eye_timer' do
+    haml :eye_timer
+  end
+
   get '/about' do
     haml :about, :locals => { :name => 'Sinatra Markup App' }
   end
