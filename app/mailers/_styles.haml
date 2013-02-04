@@ -3,6 +3,7 @@
 
 :ruby
   def zero;  "margin:0;padding:0;" ; end
+  def img_zero; { border: 0, align: :bottom, style: 'display:block;align:bottom;border:none;' + zero }; end
 
   # addons
   def iblock; "display:inline-block;"   ; end
@@ -28,9 +29,10 @@
   def tbg(x); { bgcolor: x }                                              ; end
 
   # custom
-  def wjoin2; { colspan: 2 }  ; end
-  def wjoin3; { colspan: 3 }  ; end
-  def wjoin4; { colspan: 4 }  ; end
+  def wjoin2;  { colspan: 2 }  ; end
+  def wjoin3;  { colspan: 3 }  ; end
+  def wjoin4;  { colspan: 4 }  ; end
+  def wjoin n; { colspan: n }  ; end
 
   # colors
   def bg(x); "background:#{x};" ; end
