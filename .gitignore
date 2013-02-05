@@ -8,4 +8,4 @@ vendor/gems/*
 Gemfile.lock
 lib/mail_settings.rb
 .rvmrc
-log
+log/*

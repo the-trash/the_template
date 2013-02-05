@@ -110,7 +110,7 @@ class MarkupTemplate < Padrino::Application
 
     # hstore2
     @@attachments = []
-    25.times do |i|
+    29.times do |i|
       @@attachments.push "hstore2/hstore_#{"%02d" % i.next}.png"
     end
   end
