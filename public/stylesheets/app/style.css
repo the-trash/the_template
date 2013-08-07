@@ -3,8 +3,20 @@
   margin: auto;
   padding-top: 30px;
 }
+.index p, .index h1, .index h2, .index h3, .index h4, .index h5, .about p, .about h1, .about h2, .about h3, .about h4, .about h5 {
+  line-height: 160%;
+}
 .index .part, .about .part {
   margin-bottom: 30px;
+}
+.index .part h4, .about .part h4 {
+  margin-bottom: 30px;
+}
+.index .part a, .about .part a {
+  text-decoration: none;
+}
+.index .part a:hover, .about .part a:hover {
+  color: orange;
 }
 .index .part p, .about .part p {
   font-size: 1.6em;

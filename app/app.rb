@@ -75,7 +75,6 @@ class MarkupTemplate < Padrino::Application
     addressers = (addressers_1 + addressers_2).uniq
 
     subject = params[:subject]
-    
 
     # LOG FILES NAMES
     log_name = "#{Padrino.root}/log/#{Time.new.strftime("%Y-%M-%d-%H-%M")}"

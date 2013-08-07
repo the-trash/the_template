@@ -1,7 +1,7 @@
 /*
   zykin-ilya@ya.ru
   github.com/the-teacher
-  Last modified: 15 jan 2013
+  Last modified: 19 mar 2012
 
   GLOBAL font-size: 10px; (aka 62.5%)
   provide identity of:
@@ -32,16 +32,15 @@ article, aside, details, figcaption, figure, footer,
 header, hgroup, menu, nav, section{
   display: block
 }
-
 canvas, video, audio[controls]{
   display: inline-block;
   *display: inline;
   zoom: 1
 }
-
 audio{ display: none }
 [hidden]{ display: none }
 mark{ background: yellow; padding: 0 5px }
+/* HTML5 INIT */
 
 /* TABLES */
 table, tr, th, td{
@@ -50,13 +49,19 @@ table, tr, th, td{
   border-spacing: 0
 }
 th{ font-weight: bold }
+/* TABLES */
+
+/* LIST */
+ol, ul{ list-style: none; margin: 0 }
+li{ list-style-position: outside }
+/* LIST */
 
 img{ vertical-align: top; }
 
 /* IE a > img fix*/
 a img{ border: none; }
 
-a{ text-decoration: underline  }
+a{ text-decoration: none  }
 a:hover{ text-decoration: none }
 a:hover, a:active { outline: 0 }
 
@@ -71,9 +76,9 @@ noscript{
   color: white
 }
 
-/* LIST */
-ol, ul{ list-style: none; margin: 0 }
-li{ list-style-position: outside }
+/* CUSTOM */
+p{ line-height: 1.35em }
+label{ display: block }
 
 .numered_list, .marked_list{ margin-left: 20px }
 .numered_list li, .marked_list li{
@@ -84,27 +89,23 @@ li{ list-style-position: outside }
 .numered_list li{ list-style-type: decimal }
 .marked_list  li{ list-style-type: disc }
 
+.hidden   { display: none }
+.invisible{ visibility: hidden;  height: 0 }
+.visible  { visibility: visible; height: auto }
+
 /* Unbreakable */
 .nobr{
   font-size: inherit;
   white-space: nowrap
 }
 
-/* placeholders fix */
-:-moz-placeholder      { color: #999 !important; }
-:-ms-input-placeholder { color: #999 !important; }
-
-/* WebKit fixes */
-::-webkit-input-placeholder { color: #999; }
-input:focus::-webkit-input-placeholder{ color: transparent; }
-
-/* CUSTOM */
-p{ line-height: 100% }
-label{ display: block }
-
-.hidden   { display: none }
-.invisible{ visibility: hidden;  height: 0 }
-.visible  { visibility: visible; height: auto }
+/* For sliders building */
+.nobr_item{
+  display: inline-block;
+  vertical-align: top;
+  *display: inline;
+  zoom: 1
+}
 
 :focus{ outline: 0 }
 .u{ text-decoration: underline }
@@ -126,6 +127,14 @@ label{ display: block }
   opacity: 0 !important;
   border:  0 !important;
 }
+
+/* placeholders fix */
+:-moz-placeholder      { color: #999 !important; }
+:-ms-input-placeholder { color: #999 !important; }
+
+/* WebKit fixes */
+::-webkit-input-placeholder { color: #999; }
+input:focus::-webkit-input-placeholder{ color: transparent; }
 
 @media screen and (-webkit-min-device-pixel-ratio:0){
   /*

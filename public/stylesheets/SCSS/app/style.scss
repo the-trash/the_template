@@ -3,8 +3,20 @@
   margin: auto;
   padding-top: 30px;
 
+  p, h1, h2, h3, h4, h5{
+    line-height: 160%;
+  }
+
   .part{
     margin-bottom: 30px;
+
+    h4{
+      margin-bottom: 30px;
+    }
+    a{
+      text-decoration: none;
+      &:hover{ color: orange; }
+    }
 
     p{
       font-size: 1.6em;
