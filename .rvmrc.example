@@ -1,1 +1,1 @@
-rvm use ruby-1.9.3-p0@padrino --create
+rvm use ruby-1.9.3-p392@zykin_rails4 --create
