@@ -1,15 +1,20 @@
-/* rev 15 jan 2013 */
 @import "compass/css3/inline-block";
 
 @mixin corp_font  { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; }
 @mixin corp_font2 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 400; }
 @mixin corp_font3 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 600; }
-
+@mixin corp_light { font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif; font-weight: 100; }
 @mixin treb_ms    { font-family: 'Trebuchet MS', Helvetica, sans-serif }
 @mixin arial      { font-family: Arial, Helvetica, sans-serif          }
 @mixin times      { font-family: 'Times New Roman', Times, serif       }
 
 @mixin overblock{ overflow: hidden; zoom: 1 }
+
+/*@mixin inline-block{
+  display: inline-block;
+  *display: inline;
+  zoom: 1
+}*/
 
 /* for sliders building */
 @mixin nobr_block{

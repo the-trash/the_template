@@ -1,4 +1,8 @@
-/* rev 15 jan 2013 */
+/*@mixin inline-block{
+  display: inline-block;
+  *display: inline;
+  zoom: 1
+}*/
 /* for sliders building */
 /* no text elements select */
 /*
