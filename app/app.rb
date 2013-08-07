@@ -1,5 +1,4 @@
 # $KCODE = "UTF-8"
-# encoding: UTF-8
 # coding: UTF-8
 
 require 'sass'
@@ -48,10 +47,6 @@ class MarkupTemplate < Padrino::Application
     haml :index
   end
 
-  get '/eye_timer' do
-    haml :eye_timer
-  end
-
   get '/about' do
     haml :about, :locals => { :name => 'Sinatra Markup App' }
   end
@@ -66,47 +61,6 @@ class MarkupTemplate < Padrino::Application
   # SEND MAIL
   before '/mail/send' do
     @@img_path    = "#{Padrino.root}/public/images/"
-    # @@attachments = %w[
-    #   ae_project/base/ae.jpg
-
-    #   ae_project/base/vk.jpg
-    #   ae_project/base/tw.jpg
-    #   ae_project/base/fb.jpg
-    #   ae_project/base/lj.jpg
-
-    #   ae_project/post/1.png
-    #   ae_project/post/2.png
-    #   ae_project/post/3.png
-
-    #   ae_project/blog/1.png
-    #   ae_project/blog/2.jpg
-    #   ae_project/blog/3.jpg
-
-    #   ae_project/archive/1.png
-    #   ae_project/archive/2.png
-    #   ae_project/archive/3.png
-    # ]
-
-    # @@attachments = %w[
-    #   ae_base/new_year_header.jpg
-    #   ae_base/new_year_footer.jpg
-    # ]
-
-    # @@attachments = %w[
-    #   hstore/dots_long.gif
-    #   hstore/dots_short.gif
-      
-    #   hstore/fb.jpg
-    #   hstore/vk.jpg
-    #   hstore/tw.jpg
-    #   hstore/ig.jpg
-    #   hstore/fs.jpg
-
-    #   hstore/header.jpg
-    #   hstore/footer.gif
-    #   hstore/h-store.gif
-    #   hstore/yandex_vote.gif
-    # ]
 
     # hstore2
     @@attachments = []
@@ -122,10 +76,10 @@ class MarkupTemplate < Padrino::Application
 
     subject = params[:subject]
     
-    # post@artelectronics.ru, killich@mail.ru, zykin-ilya@ya.ru, gkillich@gmail.com
 
     # LOG FILES NAMES
     log_name = "#{Padrino.root}/log/#{Time.new.strftime("%Y-%M-%d-%H-%M")}"
+
     # LOGGING OPEN
     log_success = File.open "#{log_name}.success.log", 'w+'
     log_error   = File.open "#{log_name}.error.log",   'w+'
