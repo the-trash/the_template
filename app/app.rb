@@ -47,8 +47,12 @@ class MarkupTemplate < Padrino::Application
     haml :index
   end
 
-  get '/about' do
-    haml :about, :locals => { :name => 'Sinatra Markup App' }
+  get '/test_page' do
+    haml :test_page, :locals => { :name => 'Sinatra Markup App' }
+  end
+
+  get '/example' do
+    haml :example
   end
 
   get '/mail/letter' do

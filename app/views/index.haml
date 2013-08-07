@@ -1,3 +1,6 @@
+- content_for :css do
+  = stylesheet_link_tag 'app/style'
+
 .index
   .part
     %h1 Sinatra/Padrino App for Frontend developers
@@ -9,5 +12,6 @@
 
   .part
     %h4= link_to 'The_template project', 'https://github.com/the-teacher/the_template'
-    %h4= link_to 'Example page', '/about'
     %h4= link_to 'HTML letter example', '/mail/letter'
+    %h4= link_to 'Test page', '/test_page'
+    %h4= link_to 'Example page', '/example'
