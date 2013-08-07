@@ -1,7 +1,7 @@
 /*
   zykin-ilya@ya.ru
   github.com/the-teacher
-  Last modified: 15 jan 2013
+  Last modified: 19 mar 2012
 
   GLOBAL font-size: 10px; (aka 62.5%)
   provide identity of:
@@ -56,6 +56,7 @@ mark {
   padding: 0 5px;
 }
 
+/* HTML5 INIT */
 /* TABLES */
 table, tr, th, td {
   border-collapse: collapse;
@@ -67,6 +68,18 @@ th {
   font-weight: bold;
 }
 
+/* TABLES */
+/* LIST */
+ol, ul {
+  list-style: none;
+  margin: 0;
+}
+
+li {
+  list-style-position: outside;
+}
+
+/* LIST */
 img {
   vertical-align: top;
 }
@@ -77,7 +90,7 @@ a img {
 }
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:hover {
@@ -108,14 +121,13 @@ noscript {
   color: white;
 }
 
-/* LIST */
-ol, ul {
-  list-style: none;
-  margin: 0;
+/* CUSTOM */
+p {
+  line-height: 1.35em;
 }
 
-li {
-  list-style-position: outside;
+label {
+  display: block;
 }
 
 .numered_list, .marked_list {
@@ -136,39 +148,6 @@ li {
   list-style-type: disc;
 }
 
-/* Unbreakable */
-.nobr {
-  font-size: inherit;
-  white-space: nowrap;
-}
-
-/* placeholders fix */
-:-moz-placeholder {
-  color: #999999 !important;
-}
-
-:-ms-input-placeholder {
-  color: #999999 !important;
-}
-
-/* WebKit fixes */
-::-webkit-input-placeholder {
-  color: #999;
-}
-
-input:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-/* CUSTOM */
-p {
-  line-height: 100%;
-}
-
-label {
-  display: block;
-}
-
 .hidden {
   display: none;
 }
@@ -181,6 +160,20 @@ label {
 .visible {
   visibility: visible;
   height: auto;
+}
+
+/* Unbreakable */
+.nobr {
+  font-size: inherit;
+  white-space: nowrap;
+}
+
+/* For sliders building */
+.nobr_item {
+  display: inline-block;
+  vertical-align: top;
+  *display: inline;
+  zoom: 1;
 }
 
 :focus {
@@ -213,6 +206,24 @@ label {
   width: 1px !important;
   opacity: 0 !important;
   border: 0 !important;
+}
+
+/* placeholders fix */
+:-moz-placeholder {
+  color: #999 !important;
+}
+
+:-ms-input-placeholder {
+  color: #999 !important;
+}
+
+/* WebKit fixes */
+::-webkit-input-placeholder {
+  color: #999;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
