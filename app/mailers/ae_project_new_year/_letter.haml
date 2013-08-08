@@ -1,0 +1,20 @@
+%table{ table, width: '567px', align: :center }
+  %tr
+    %td{ td.merge({ height: '227px' }) }
+      = link_to "http://artelectronics.ru#{@user_email_flag}" do
+        = email_image 'ae_project/base/new_year_header.jpg', {}, @is_mail
+  %tr
+    %td{ td, style: arial + pt10 + pb10 + fs15, align: :center }
+      Команда
+
+      = link_to 'Art Electronics', "http://artelectronics.ru#{@user_email_flag}"
+
+      поздравляет Вас с наступающим Новым Годом!
+      %br
+      %br
+      Желаем   Вам   (не   только)   интеллектуальных  удовольствий  и  future
+      стремлений!
+  %tr
+    %td{ td.merge({ height: '227px' }) }
+      = link_to "http://artelectronics.ru#{@user_email_flag}" do
+        = email_image 'ae_project/base/new_year_footer.jpg', {}, @is_mail
