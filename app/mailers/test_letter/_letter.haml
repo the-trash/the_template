@@ -1,0 +1,14 @@
+- site_name = 'https://github.com/the-teacher/the_template'
+
+%center
+  %div{ style: bg(:white) + "width:840px;"  }
+    %table{ table.merge!(width: 840) }
+      %tr
+        %td{ td, wjoin(6), style: text_center }
+          = link_to site_name, style: zero + fs20 + text_center + fc(:black) do
+            = site_name
+            %br
+            %br
+            = email_image('sinatra.png', {}, @is_mail)
+            %br
+            %br
