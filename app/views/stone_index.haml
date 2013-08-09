@@ -2,10 +2,19 @@
   = stylesheet_link_tag 'stone_garant/index'
 
 .content_line.dark_gray_1
-  .content_holder.index_header.cf
+  .content_holder.index_header
     .description Памятники из черного гранита с доставкой по всей России
     .phone 8 800 333-08-31
+    .recall= link_to 'Вам перезвонить?', '#'
 
-  .content_holder.index_header.cf
-    .description Памятники из черного гранита с доставкой по всей России
-    .phone 8 800 333-08-31
+.content_line.light_gray_1
+  .content_holder.base_nav.cf
+    .mlr20
+      = link_to '', '#', class: :stone_garant_logo
+      .menu
+        = link_to 'Продукция'
+        = link_to 'Компания'
+        = link_to 'Работы'
+        = link_to 'Услуги'
+        = link_to 'Акции'
+        = link_to 'Контакты'

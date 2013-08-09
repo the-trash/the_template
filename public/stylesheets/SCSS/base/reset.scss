@@ -125,10 +125,11 @@ label{ display: block }
 .cf:after {
   content: ".";
   display: block;
+  line-height: 0;
+
+  height: 0;
   clear: both;
   visibility: hidden;
-  line-height: 0;
-  height: 0;
 }
 
 html[xmlns] .cf { display: block; }

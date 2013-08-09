@@ -14,14 +14,61 @@
   }
 }
 */
+.stone_garant_logo {
+  height: 70px;
+  width: 210px;
+  float: left;
+  display: block;
+  background: gray;
+}
+
 .index_header {
   font-family: Arial, Helvetica, sans-serif;
+  height: 50px;
 }
 .index_header .description {
-  border: 1px solid blue;
-  float: left;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  font-size: 1.4em;
+  border: 0px solid blue;
 }
 .index_header .phone {
-  border: 1px solid red;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  color: white;
+  font-size: 1.9em;
+  border: 0px solid red;
+}
+.index_header .recall {
+  position: absolute;
+  top: 20px;
+  right: 200px;
+}
+.index_header .recall a {
+  padding: 7px 15px;
+  color: #ededed;
+  font-size: 1.2em;
+  background: #434446;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.index_header .recall a:hover {
+  color: #c75a38;
+}
+
+.base_nav .menu {
+  padding-top: 35px;
+  font-family: Arial, Helvetica, sans-serif;
   float: right;
+}
+.base_nav .menu a {
+  color: #010101;
+  font-size: 1.5em;
+  margin-left: 35px;
+  text-decoration: none;
+}
+.base_nav .menu a:hover {
+  text-decoration: underline;
 }

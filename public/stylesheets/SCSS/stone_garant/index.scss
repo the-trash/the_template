@@ -1,14 +1,60 @@
 @import "../base/mix";
 
+.stone_garant_logo{
+  height: 70px;
+  width: 210px;
+  float: left;
+  display: block;
+  background: gray;
+}
+
 .index_header{
   @include arial;
+  height: 50px;
 
   .description{
-    border: 1px solid blue;
-    float: left;
+    position: absolute;
+    top: 17px; left: 20px;
+
+    font-size: 1.4em;
+    border: 0px solid blue;
   }
   .phone{
-    border: 1px solid red;
+    position: absolute;
+    top: 16px; right: 20px;
+
+    color: white;
+    font-size: 1.9em;
+    border: 0px solid red;
+  }
+  .recall{
+    position: absolute;
+    top: 20px; right: 200px;
+
+    a{
+      padding: 7px 15px;
+      color: #ededed;
+      font-size: 1.2em;
+      background: #434446;
+      border-radius: 20px;
+      text-decoration: none;
+      &:hover{ color: #c75a38; }
+    }
+  }
+}
+.base_nav{
+  .menu{
+    padding-top: 35px;
+    @include arial;
     float: right;
+
+    a{
+      color: #010101;
+      font-size: 1.5em;
+      margin-left: 35px;
+      text-decoration: none;
+      
+      &:hover{ text-decoration: underline; }
+    }
   }
 }
