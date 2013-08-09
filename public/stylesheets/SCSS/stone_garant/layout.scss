@@ -1,4 +1,6 @@
-body, html{ background: #28292e; }
+@import "../base/mix";
+
+body, html{ background: #edede9; }
 
 /* Styles */
 a{
@@ -24,10 +26,13 @@ a{
 /* Base BG */
 .dark_gray_1 { background: #272a2d; }
 .dark_gray_2 { background: #28292e; }
+.dark_gray_3 { background: #393a3c; }
 
 .light_gray_1{ background: #f4f4f4; }
 .light_gray_2{ background: #edede9; }
 .light_gray_3{ background: #dcd7d2; }
+
+
 
 /* Base styles */
 .dark_gray_1{
@@ -35,6 +40,10 @@ a{
 }
 .dark_gray_2{
   color: #cacaca;
+}
+.dark_gray_3{
+  @include arial;
+  color: white;
 }
 .light_gray_3{
   color: #3e3932;

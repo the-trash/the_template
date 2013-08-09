@@ -1,5 +1,21 @@
+/*@mixin inline-block{
+  display: inline-block;
+  *display: inline;
+  zoom: 1
+}*/
+/* for sliders building */
+/* no text elements select */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0){
+  .class{
+   .element{
+     display: inline-table;
+   }
+  }
+}
+*/
 body, html {
-  background: #28292e;
+  background: #edede9;
 }
 
 /* Styles */
@@ -35,6 +51,10 @@ a:hover {
   background: #28292e;
 }
 
+.dark_gray_3 {
+  background: #393a3c;
+}
+
 .light_gray_1 {
   background: #f4f4f4;
 }
@@ -54,6 +74,11 @@ a:hover {
 
 .dark_gray_2 {
   color: #cacaca;
+}
+
+.dark_gray_3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 .light_gray_3 {

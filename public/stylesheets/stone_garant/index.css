@@ -59,16 +59,59 @@
 }
 
 .base_nav .menu {
-  padding-top: 35px;
   font-family: Arial, Helvetica, sans-serif;
   float: right;
+  padding-top: 35px;
 }
 .base_nav .menu a {
   color: #010101;
-  font-size: 1.5em;
+  font-size: 1.7em;
   margin-left: 35px;
   text-decoration: none;
 }
 .base_nav .menu a:hover {
   text-decoration: underline;
+}
+
+.sections_nav a {
+  font-family: Arial, Helvetica, sans-serif;
+  float: left;
+  display: block;
+  padding: 0 15px;
+  height: 105px;
+  line-height: 160px;
+  margin-right: 20px;
+  color: white;
+  font-size: 1.4em;
+  border: 1px solid #f4f4f4;
+}
+.sections_nav .helper {
+  float: right;
+}
+.sections_nav .helper a {
+  margin: 0;
+}
+
+.main_banner {
+  height: 500px;
+}
+.main_banner .title {
+  font-size: 4em;
+}
+.main_banner .descr {
+  font-size: 2em;
+}
+.main_banner .helper {
+  font-size: 1.3em;
+}
+.main_banner:after {
+  display: block;
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 100px;
+  height: 500px;
+  width: 400px;
+  background: #28292e;
+  border: 1px solid #f4f4f4;
 }
