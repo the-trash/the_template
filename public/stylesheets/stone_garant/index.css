@@ -1,0 +1,27 @@
+/*@mixin inline-block{
+  display: inline-block;
+  *display: inline;
+  zoom: 1
+}*/
+/* for sliders building */
+/* no text elements select */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0){
+  .class{
+   .element{
+     display: inline-table;
+   }
+  }
+}
+*/
+.index_header {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.index_header .description {
+  border: 1px solid blue;
+  float: left;
+}
+.index_header .phone {
+  border: 1px solid red;
+  float: right;
+}

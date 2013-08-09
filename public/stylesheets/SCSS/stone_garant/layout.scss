@@ -1,5 +1,12 @@
 body, html{ background: #28292e; }
 
+a{
+  color: #c75a38;
+  text-decoration: underline;
+
+  &:hover{ text-decoration: none; }
+}
+
 .dark_gray_1 { background: #272a2d; }
 .dark_gray_2 { background: #28292e; }
 
@@ -8,11 +15,12 @@ body, html{ background: #28292e; }
 .light_gray_3{ background: #dcd7d2; }
 
 .content_line{
-  border: 1px solid red;
+  border: 0px solid red;
 
   .content_holder{
     margin: 0 auto;
     width:  1000px;
+    position: relative;
     border: 1px solid blue;
   }
 }

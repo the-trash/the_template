@@ -2,6 +2,14 @@ body, html {
   background: #28292e;
 }
 
+a {
+  color: #c75a38;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+
 .dark_gray_1 {
   background: #272a2d;
 }
@@ -23,10 +31,11 @@ body, html {
 }
 
 .content_line {
-  border: 1px solid red;
+  border: 0px solid red;
 }
 .content_line .content_holder {
   margin: 0 auto;
   width: 1000px;
+  position: relative;
   border: 1px solid blue;
 }

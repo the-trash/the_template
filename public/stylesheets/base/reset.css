@@ -200,10 +200,6 @@ label {
 }
 
 /* clearfix */
-.cf {
-  display: inline-block;
-}
-
 .cf:after {
   content: ".";
   display: block;

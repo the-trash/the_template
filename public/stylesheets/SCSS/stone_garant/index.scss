@@ -1,0 +1,14 @@
+@import "../base/mix";
+
+.index_header{
+  @include arial;
+
+  .description{
+    border: 1px solid blue;
+    float: left;
+  }
+  .phone{
+    border: 1px solid red;
+    float: right;
+  }
+}
