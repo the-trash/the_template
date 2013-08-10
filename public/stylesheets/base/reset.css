@@ -184,17 +184,37 @@ label {
   text-decoration: underline;
 }
 
-.overblock {
-  overflow: hidden;
-  zoom: 1;
-}
-
 .indicator, .stop_indicator {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1000;
   display: none;
+}
+
+/* hacks */
+/* overblock */
+.ob {
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* clearfix */
+.cf:after {
+  content: ".";
+  display: block;
+  line-height: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+html[xmlns] .cf {
+  display: block;
+}
+
+* html .cf {
+  zoom: 1;
 }
 
 /* hidden input text, for custom calendars fields */

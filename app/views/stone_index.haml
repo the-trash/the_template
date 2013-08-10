@@ -1,0 +1,53 @@
+- content_for :css do
+  = stylesheet_link_tag 'stone_garant/index'
+
+.content_line.dark_gray_1
+  .content_holder.index_header
+    .description Памятники из черного гранита с доставкой по всей России
+    .phone 8 800 333-08-31
+    .recall= link_to 'Вам перезвонить?', '#'
+
+.content_line.light_gray_1
+  .content_holder.base_nav.cf
+    .mlr20
+      = link_to '', '#', class: :stone_garant_logo
+      .menu
+        = link_to 'Продукция'
+        = link_to 'Компания'
+        = link_to 'Работы'
+        = link_to 'Услуги'
+        = link_to 'Акции'
+        = link_to 'Контакты'
+
+.content_line.dark_gray_1
+  .content_holder.sections_nav.cf
+    .mlr20
+      .sections
+        = link_to 'Одинарные'
+        = link_to 'Двойные'
+        = link_to 'С крестами'
+        = link_to 'Простые'
+        = link_to 'Эксклюзивные'
+        = link_to 'Комплектующие'
+
+      .helper
+        = link_to 'Помощьник'
+
+.content_line.dark_gray_3
+  .content_holder.main_banner
+    .mlr20
+      %p.title
+        гарантия памяти
+        %br
+        о ваших близких
+
+      %p.descr
+        Наша мастерская производит надгробные памятники 
+        %br
+        из черного гранита и доставляет их по всей России
+
+      = link_to 'Подобрать памятник', '#', class: :looking_for_stone
+
+      %p.helper
+        Не знаете какой памятник Вам нужен? Тогда воспользуйтесь
+        = link_to 'помощником', '#'

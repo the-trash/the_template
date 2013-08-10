@@ -122,17 +122,16 @@ label{ display: block }
 .ob{ overflow: hidden; zoom: 1 }
 
 /* clearfix */
-.cf{ display: inline-block; }
-
 .cf:after {
   content: ".";
   display: block;
+  line-height: 0;
+
+  height: 0;
   clear: both;
   visibility: hidden;
-  line-height: 0;
-  height: 0;
 }
-  
+
 html[xmlns] .cf { display: block; }
 * html .cf { zoom: 1; }
 

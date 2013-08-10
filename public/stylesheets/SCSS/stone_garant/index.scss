@@ -1,0 +1,112 @@
+@import "../base/mix";
+
+.stone_garant_logo{
+  height: 70px;
+  width: 210px;
+  float: left;
+  display: block;
+  background: gray;
+}
+
+.index_header{
+  @include arial;
+  height: 50px;
+
+  .description{
+    position: absolute;
+    top: 17px; left: 20px;
+
+    font-size: 1.4em;
+    border: 0px solid blue;
+  }
+  .phone{
+    position: absolute;
+    top: 16px; right: 20px;
+
+    color: white;
+    font-size: 1.9em;
+    border: 0px solid red;
+  }
+  .recall{
+    position: absolute;
+    top: 20px; right: 200px;
+
+    a{
+      padding: 7px 15px;
+      color: #ededed;
+      font-size: 1.2em;
+      background: #434446;
+      border-radius: 20px;
+      text-decoration: none;
+      &:hover{ color: #c75a38; }
+    }
+  }
+}
+.base_nav{
+  .menu{
+    @include arial;
+    float: right;
+    padding-top: 35px;
+
+    a{
+      color: #010101;
+      font-size: 1.7em;
+      margin-left: 35px;
+      text-decoration: none;
+      
+      &:hover{ text-decoration: underline; }
+    }
+  }
+}
+
+.sections_nav{
+  a{
+    @include arial;
+
+    float: left;
+    display: block;
+    padding: 0 15px;
+
+    height: 105px;
+    line-height: 160px;
+    margin-right: 20px;
+
+    color: white;
+    font-size: 1.4em;
+    border: 1px solid #f4f4f4;
+  }
+
+  .helper{
+    float: right;
+    a{ margin: 0; }
+  }
+}
+
+.main_banner{
+  height: 500px;
+  
+  .title{
+    font-size:4em;
+  }
+
+  .descr{
+    font-size:2em;
+  }
+
+  .helper{
+    font-size: 1.3em;
+  }
+
+  &:after{
+    display: block;
+    content: ' ';
+    position: absolute;
+    top: 0; right: 100px;
+
+    height: 500px;
+    width: 400px;
+
+    background: #28292e;
+    border: 1px solid #f4f4f4;
+  }
+}

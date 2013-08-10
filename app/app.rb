@@ -42,6 +42,11 @@ class MarkupTemplate < Padrino::Application
     end
   end
 
+  # Stone Garant
+  get '/stone_index' do
+    haml :stone_index, layout: :stone_garant
+  end
+
   # Pages
   get '/' do
     haml :index
