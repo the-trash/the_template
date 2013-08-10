@@ -1,4 +1,7 @@
 @import "../base/mix";
+@import "compass/css3/opacity";
+@import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
 
 .stone_garant_logo{
   height: 70px;
@@ -42,6 +45,7 @@
     }
   }
 }
+
 .base_nav{
   .menu{
     @include arial;
@@ -93,8 +97,42 @@
     font-size:2em;
   }
 
+  .choose_goods{
+    @include arial;
+    @include box-shadow(
+      0 1px 1px -1px white inset,
+      0px 1px 4px -1px #010101
+    );
+
+    @include text-shadow(0.1px -0.1px 1px #222);
+
+    position: absolute;
+    top: 280px; left: 30px;
+    
+    color: white;
+    padding: 0 30px;
+    font-size: 1.2em;
+    line-height: 40px;
+    border-radius: 3px;
+    background: #c85b39;
+  }
+
   .helper{
+    position: absolute;
+    bottom: 30px; left: 30px;
+
     font-size: 1.3em;
+
+    &:before{
+      content: ' ';
+      position: absolute;
+      top: -10px; left: 0;
+
+      width: 120%;
+
+      border-top: 1px solid white;
+      @include opacity(0.1);
+    }
   }
 
   &:after{
@@ -108,5 +146,95 @@
 
     background: #28292e;
     border: 1px solid #f4f4f4;
+  }
+}
+
+.quality{
+  @include arial;
+  height: 350px;
+
+  .title{
+    padding-top: 30px;
+    font-size: 3.2em;
+    text-align: center;
+  }
+
+  .descr{
+    font-size: 1.2em;
+    margin-left: 410px;
+  }
+
+  .portfolio{
+    position: absolute;
+    top: 90px; left: 20px;
+    width: 350px; height: 320px;
+
+    background: gray;
+  }
+
+  .etching{
+    display: block;
+    position: relative;
+    padding: 10px 0 0 80px;
+
+    &:before{
+      position: absolute;
+      top: 10px; left: 0;
+
+      display: block;
+      content: ' ';
+      width: 70px;
+      height: 70px;
+      background: gray;
+    }
+  }
+}
+
+.advantages{
+  @include arial;
+  padding-top: 80px;
+  padding-bottom: 30px;
+
+  p{
+    font-size: 1.2em;
+    margin-left: 80px;
+
+    b{
+      display: block;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+  }
+
+  ul{
+    li{
+      float: left;
+      width: 49.98%;
+      background: gray;
+      position: relative;
+
+      &:before{
+        display: block;
+        content: ' ';
+
+        position: absolute;
+        top: 0; left: 0;
+
+        width: 50px; height: 50px;
+      }
+
+      &:nth-child(1):before{
+        background: red;
+      }
+      &:nth-child(2):before{
+        background: green;
+      }
+      &:nth-child(3):before{
+        background: blue;
+      }
+      &:nth-child(4):before{
+        background: black;
+      }
+    }
   }
 }

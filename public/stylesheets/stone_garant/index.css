@@ -101,8 +101,37 @@
 .main_banner .descr {
   font-size: 2em;
 }
+.main_banner .choose_goods {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-box-shadow: 0 1px 1px -1px white inset, 0px 1px 4px -1px #010101;
+  -moz-box-shadow: 0 1px 1px -1px white inset, 0px 1px 4px -1px #010101;
+  box-shadow: 0 1px 1px -1px white inset, 0px 1px 4px -1px #010101;
+  text-shadow: 0.1px -0.1px 1px #222222;
+  position: absolute;
+  top: 280px;
+  left: 30px;
+  color: white;
+  padding: 0 30px;
+  font-size: 1.2em;
+  line-height: 40px;
+  border-radius: 3px;
+  background: #c85b39;
+}
 .main_banner .helper {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
   font-size: 1.3em;
+}
+.main_banner .helper:before {
+  content: ' ';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 120%;
+  border-top: 1px solid white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  opacity: 0.1;
 }
 .main_banner:after {
   display: block;
@@ -114,4 +143,83 @@
   width: 400px;
   background: #28292e;
   border: 1px solid #f4f4f4;
+}
+
+.quality {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 350px;
+}
+.quality .title {
+  padding-top: 30px;
+  font-size: 3.2em;
+  text-align: center;
+}
+.quality .descr {
+  font-size: 1.2em;
+  margin-left: 410px;
+}
+.quality .portfolio {
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  width: 350px;
+  height: 320px;
+  background: gray;
+}
+.quality .etching {
+  display: block;
+  position: relative;
+  padding: 10px 0 0 80px;
+}
+.quality .etching:before {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  display: block;
+  content: ' ';
+  width: 70px;
+  height: 70px;
+  background: gray;
+}
+
+.advantages {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+.advantages p {
+  font-size: 1.2em;
+  margin-left: 80px;
+}
+.advantages p b {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.advantages ul li {
+  float: left;
+  width: 49.98%;
+  background: gray;
+  position: relative;
+}
+.advantages ul li:before {
+  display: block;
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+.advantages ul li:nth-child(1):before {
+  background: red;
+}
+.advantages ul li:nth-child(2):before {
+  background: green;
+}
+.advantages ul li:nth-child(3):before {
+  background: blue;
+}
+.advantages ul li:nth-child(4):before {
+  background: black;
 }
