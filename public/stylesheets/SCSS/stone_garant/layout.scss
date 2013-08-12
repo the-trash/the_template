@@ -1,5 +1,9 @@
 @import "../base/mix";
 
+@import "compass/css3/images";
+@import "compass/css3/opacity";
+$experimental-support-for-svg: true;
+
 body, html{ background: #edede9; }
 
 /* Styles */
@@ -15,6 +19,8 @@ a{
   border: 0px solid red;
 
   .content_holder{
+    @include arial;
+
     margin: 0 auto;
     width:  1000px;
     position: relative;
@@ -26,9 +32,28 @@ a{
 /* Base BG */
 .dark_gray_1 { background: #272a2d; }
 .dark_gray_2 { background: #28292e; }
-.dark_gray_3 {
-  background: #393a3c;
-  background: image-url('/images/granit_bg.jpg') repeat scroll 0 0 #393A3C;
+.dark_gray_3 { background: #393A3C; }
+.dark_gray_4 {
+  z-index: 1;
+  position: relative;
+  background: image-url('/images/granit_pattern.png') repeat scroll 0 0 #393A3C;
+
+  &:before{
+    position: absolute;
+    top: 0; left: 0;
+
+    border: 1px solid red;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    content: ' ';
+    z-index: 2;
+
+    @include opacity(.5);
+    @include background-image(linear-gradient(left, black, transparent));
+  }
 }
 
 .light_gray_1{ background: #f4f4f4; }
@@ -43,7 +68,6 @@ a{
   color: #cacaca;
 }
 .dark_gray_3{
-  @include arial;
   color: white;
 }
 .light_gray_3{

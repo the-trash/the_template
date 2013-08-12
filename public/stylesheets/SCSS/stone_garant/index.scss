@@ -80,29 +80,30 @@
     border: 0px solid #f4f4f4;
 
     background-image: image-url('/images/block_types.png');
+    background-position: 22px 22px;
     background-color: transparent;
     background-repeat: no-repeat;
 
     &:nth-child(1){
-      background-position: 38px 15px;
+      background-position: 22px 17px;
     }
     &:nth-child(2){
-      background-position: -84px 15px;
+      background-position: 15px -103px;
     }
     &:nth-child(3){
-      background-position: -207px 15px;
+      background-position: 22px -222px;
     }
     &:nth-child(4){
-      background-position: -343px 15px;
+      background-position: 13px -341px;
     }
     &:nth-child(5){
-      background-position: -460px 15px;
+      background-position: 28px -460px;
     }
     &:nth-child(6){
-      background-position: -603px 15px;
+      background-position: 35px -581px;
     }
     &:nth-child(7){
-      background-position: -603px 15px;
+      background-position: 22px 17px;
     }
   }
 
@@ -114,7 +115,7 @@
 
 .main_banner{
   height: 500px;
-  
+  z-index: 3;
   /*background: image-url('/images/granit_bg.jpg') repeat scroll 0 0 #393A3C;*/
 
   .title{
@@ -164,6 +165,7 @@
   }
 
   &:after{
+    z-index: 10;
     display: block;
     content: ' ';
     position: absolute;
@@ -194,9 +196,10 @@
   .portfolio{
     position: absolute;
     top: 90px; left: 20px;
-    width: 350px; height: 320px;
+    width: 420px; height: 320px;
 
     background: gray;
+    background: image-url('/images/middle_block_placeholder.png') no-repeat scroll center center transparent;
   }
 
   .etching{
@@ -211,8 +214,8 @@
       display: block;
       content: ' ';
       width: 70px;
-      height: 70px;
-      background: gray;
+      height: 50px;
+      background: image-url('/images/block_icon.png') no-repeat scroll top center transparent;
     }
   }
 }
@@ -250,17 +253,21 @@
         width: 50px; height: 50px;
       }
 
+      &:before{
+        background-image: image-url('/images/advantages_icons.png');
+        background-repeat: no-repeat;
+      }
       &:nth-child(1):before{
-        background: red;
+
       }
       &:nth-child(2):before{
-        background: green;
+
       }
       &:nth-child(3):before{
-        background: blue;
+
       }
       &:nth-child(4):before{
-        background: black;
+
       }
     }
   }
