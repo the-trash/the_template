@@ -19,7 +19,7 @@
   width: 210px;
   float: left;
   display: block;
-  background: gray;
+  background: url(/images/stone_garant_logo.png) no-repeat scroll 0 15px transparent;
 }
 
 .index_header {
@@ -83,7 +83,31 @@
   margin-right: 20px;
   color: white;
   font-size: 1.4em;
-  border: 1px solid #f4f4f4;
+  border: 0px solid #f4f4f4;
+  background-image: url(/images/block_types.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+.sections_nav a:nth-child(1) {
+  background-position: 38px 15px;
+}
+.sections_nav a:nth-child(2) {
+  background-position: -84px 15px;
+}
+.sections_nav a:nth-child(3) {
+  background-position: -207px 15px;
+}
+.sections_nav a:nth-child(4) {
+  background-position: -343px 15px;
+}
+.sections_nav a:nth-child(5) {
+  background-position: -460px 15px;
+}
+.sections_nav a:nth-child(6) {
+  background-position: -603px 15px;
+}
+.sections_nav a:nth-child(7) {
+  background-position: -603px 15px;
 }
 .sections_nav .helper {
   float: right;
@@ -94,6 +118,7 @@
 
 .main_banner {
   height: 500px;
+  /*background: image-url('/images/granit_bg.jpg') repeat scroll 0 0 #393A3C;*/
 }
 .main_banner .title {
   font-size: 4em;
@@ -138,11 +163,10 @@
   content: ' ';
   position: absolute;
   top: 0;
-  right: 100px;
+  right: 20px;
   height: 500px;
-  width: 400px;
-  background: #28292e;
-  border: 1px solid #f4f4f4;
+  width: 490px;
+  background: url(/images/dark_block.png) no-repeat scroll 0 -100px transparent;
 }
 
 .quality {

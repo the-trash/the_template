@@ -26,7 +26,10 @@ a{
 /* Base BG */
 .dark_gray_1 { background: #272a2d; }
 .dark_gray_2 { background: #28292e; }
-.dark_gray_3 { background: #393a3c; }
+.dark_gray_3 {
+  background: #393a3c;
+  background: image-url('/images/granit_bg.jpg') repeat scroll 0 0 #393A3C;
+}
 
 .light_gray_1{ background: #f4f4f4; }
 .light_gray_2{ background: #edede9; }

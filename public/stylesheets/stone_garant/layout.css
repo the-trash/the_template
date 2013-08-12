@@ -53,6 +53,7 @@ a:hover {
 
 .dark_gray_3 {
   background: #393a3c;
+  background: url(/images/granit_bg.jpg) repeat scroll 0 0 #393a3c;
 }
 
 .light_gray_1 {
