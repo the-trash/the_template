@@ -30,28 +30,18 @@ $ ->
 
     GMap.find.geocode
       address: input.val()
-    , (data, status) ->
+    , (results, status) ->
       if status is google.maps.GeocoderStatus.OK
-        first_place = data[0]
-        position    = first_place.geometry.location
+        first_place = results[0]
 
-        GMap.clean()
+        if first_place
+          position = first_place.geometry.location
 
-        GMap.build_marker
-          map:      GMap.map
-          position: position
-          title:    'Marker'
+          GMap.clean()
+          GMap.map.setCenter position
+          GMap.build_marker_pair(position)
 
-        GMap.build_circle
-          map:          GMap.map
-          center:       position
-          strokeColor:  '#FF0000'
-          fillColor:    '#FF0000'
-          fillOpacity:   0.35
-          radius:        50
-          strokeOpacity: 0.8
-          strokeWeight:  2
+          # GMap.find.geocode({})
 
-        GMap.map.setCenter position
       else
         log "Geocode was not successful for the following reason: #{status}"

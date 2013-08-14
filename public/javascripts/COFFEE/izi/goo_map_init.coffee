@@ -9,23 +9,21 @@
 
   GMap.on GMap.map, 'click', (e) ->
     GMap.clean()
+    GMap.build_marker_pair(e.latLng)
 
-    GMap.build_marker
-      map:      GMap.map
-      position: e.latLng
-      title:    'Marker'
-
-    GMap.build_circle
+    GMap.build_rect
       map:          GMap.map
-      center:       e.latLng
-      strokeColor:  '#FF0000'
-      fillColor:    '#FF0000'
+      bounds:       GMap.create_bound_rect()
+      strokeColor:  '#00FF00'
+      fillColor:    '#00FF00'
       fillOpacity:   0.35
-      radius:        50
       strokeOpacity: 0.8
       strokeWeight:  2
-
-  # GMap.on GMap.marker, 'click', -> log 'Hello World!'
+    
+    # GMap.find.geocode
+    #   latLng: e.latLng
+    # , (results, status) ->
+    #   log results
 
 window.onload = ->
   script      = document.createElement("script")
