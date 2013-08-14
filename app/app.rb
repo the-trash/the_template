@@ -42,6 +42,10 @@ class MarkupTemplate < Padrino::Application
     end
   end
 
+  get '/izi' do
+    haml :izi
+  end
+
   # Pages
   get '/' do
     haml :index
