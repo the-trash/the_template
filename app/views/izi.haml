@@ -2,12 +2,26 @@
   = stylesheet_link_tag 'izi/base'
 
 - content_for :js do
+  = javascript_include_tag 'izi/goo_map'
+  = javascript_include_tag 'izi/goo_map_init'
   = javascript_include_tag 'izi/base'
 
-.screen
+.viewport
   .header
 
-  .map 1
+  .map_holder
+    .geocoder_holder
+      .search_form
+        %input#address{ type: :textbox, value: "spb"   }
+        %input#find_it{ type: :button,  value: "Поиск" }
+
+    .map#map-canvas
 
   .sidebar
+    .content_holder
+      - 10.times do
+        %p Hello world!
+
   .footer
+
+=# javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCRaBh6UvqVRjILPDNwpZmamTkttZ6qvWU&sensor=false'

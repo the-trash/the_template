@@ -4,36 +4,64 @@ html, body {
   background: gray;
 }
 
-.screen {
+.viewport {
   width: 100%;
   height: 100%;
   background: white;
   position: relative;
 }
-.screen .header, .screen .footer {
+.viewport .header, .viewport .footer {
   position: absolute;
   left: 0;
   width: 100%;
   height: 100px;
   background: gray;
+  z-index: 2;
 }
-.screen .header {
+.viewport .header {
   top: 0;
 }
-.screen .footer {
+.viewport .footer {
   bottom: 0;
 }
-.screen .map {
+.viewport .map_holder {
   width: 100%;
   height: 100%;
+  position: relative;
   background: red;
 }
-.screen .sidebar {
+.viewport .map_holder .geocoder_holder {
+  left: 10%;
+  z-index: 3;
+  position: absolute;
+  top: 115px;
+}
+.viewport .map_holder .geocoder_holder .search_form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.viewport .map_holder .map {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 80%;
+}
+.viewport .sidebar {
   position: absolute;
   top: 0;
   right: 0;
   width: 200px;
   height: 100%;
   background: green;
-  z-index: 3;
+  z-index: 1;
+}
+.viewport .sidebar .content_holder {
+  width: 100%;
+  overflow: auto;
+  position: absolute;
+  background: lightGray;
+  top: 100px;
+  left: 0;
 }
