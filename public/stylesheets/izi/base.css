@@ -1,0 +1,39 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  background: gray;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  background: white;
+  position: relative;
+}
+.screen .header, .screen .footer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: gray;
+}
+.screen .header {
+  top: 0;
+}
+.screen .footer {
+  bottom: 0;
+}
+.screen .map {
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+.screen .sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background: green;
+  z-index: 3;
+}
