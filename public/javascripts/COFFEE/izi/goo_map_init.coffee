@@ -1,6 +1,7 @@
 @initGMap = ->
+
   mapOptions =
-    zoom:      8
+    zoom:      16
     center:    new google.maps.LatLng(-34.397, 150.644)
     mapTypeId: google.maps.MapTypeId.ROADMAP
 
@@ -9,16 +10,7 @@
 
   GMap.on GMap.map, 'click', (e) ->
     GMap.clean()
-    GMap.build_marker_pair(e.latLng)
-
-    GMap.build_rect
-      map:          GMap.map
-      bounds:       GMap.create_bound_rect()
-      strokeColor:  '#00FF00'
-      fillColor:    '#00FF00'
-      fillOpacity:   0.35
-      strokeOpacity: 0.8
-      strokeWeight:  2
+    GMap.build_marker_group(e.latLng)
     
     # GMap.find.geocode
     #   latLng: e.latLng

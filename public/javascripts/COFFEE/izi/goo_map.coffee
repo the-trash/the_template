@@ -4,11 +4,11 @@ class @GMap
   @circle   = null
   @find     = null
 
-  @create_bound_rect: (meters = 50) -> 
+  @bound_around_point: (point, meters = 50) -> 
     meters /= 1000
 
-    lat   = GMap.marker.position.lat()
-    lng   = GMap.marker.position.lng()
+    lat   = point.position.lat()
+    lng   = point.position.lng()
     coord = { lat: lat, lng: lng }
 
     lng_corr = meters / (Math.cos(coord['lat'] * Math.PI / 180) * 111.11) / 2
@@ -32,14 +32,15 @@ class @GMap
   @build_circle: (params) ->
     GMap.circle = new google.maps.Circle params
 
-  @build_rect: (params) ->
-    GMap.rect = new google.maps.Rectangle params    
-
-  @build_marker_pair: (position) ->
+  @build_rectangle: (params) ->
+    GMap.rect = new google.maps.Rectangle params
+  
+  @build_marker_group: (position) ->
     GMap.build_marker
       map:      GMap.map
       position: position
       title:    'Marker'
+      draggable: true
 
     GMap.build_circle
       map:          GMap.map
@@ -50,3 +51,21 @@ class @GMap
       radius:        50
       strokeOpacity: 0.8
       strokeWeight:  2
+      draggable: true
+
+    GMap.build_marker
+      map:      GMap.map
+      icon:     GMap.icon
+      position: position
+      title:    'Drop'
+      icon:     "http://vk.com/images/hat.gif"
+
+    GMap.build_rectangle
+      map:          GMap.map
+      bounds:       GMap.bound_around_point(GMap.marker, 100)
+      strokeColor:  '#00FF00'
+      fillColor:    '#00FF00'
+      fillOpacity:   0.35
+      strokeOpacity: 0.8
+      strokeWeight:  2
+      draggable: true

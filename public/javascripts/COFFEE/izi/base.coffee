@@ -39,7 +39,7 @@ $ ->
 
           GMap.clean()
           GMap.map.setCenter position
-          GMap.build_marker_pair(position)
+          GMap.build_marker_group(position)
 
           # GMap.find.geocode({})
 
