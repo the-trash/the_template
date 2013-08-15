@@ -17,8 +17,8 @@
     # , (results, status) ->
     #   log results
 
-window.onload = ->
-  script      = document.createElement("script")
-  script.type = "text/javascript"
-  script.src  = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCRaBh6UvqVRjILPDNwpZmamTkttZ6qvWU&sensor=false&callback=initGMap"
-  document.body.appendChild(script)
+# window.onload = ->
+#   script      = document.createElement("script")
+#   script.type = "text/javascript"
+#   script.src  = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCRaBh6UvqVRjILPDNwpZmamTkttZ6qvWU&sensor=false"
+#   document.body.appendChild(script)

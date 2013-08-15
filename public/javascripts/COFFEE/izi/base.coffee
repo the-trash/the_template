@@ -22,6 +22,7 @@ class @Helper
   scrollbar_toggle()
 
 $ ->
+  do initGMap
   do resize_basic_blocks
   $(window).resize -> do resize_basic_blocks
 

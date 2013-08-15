@@ -2,6 +2,7 @@
   = stylesheet_link_tag 'izi/base'
 
 - content_for :js do
+  = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCRaBh6UvqVRjILPDNwpZmamTkttZ6qvWU&sensor=false'
   = javascript_include_tag 'izi/goo_map'
   = javascript_include_tag 'izi/goo_map_init'
   = javascript_include_tag 'izi/base'
