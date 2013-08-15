@@ -1,24 +1,23 @@
 @initGMap = ->
+  GMap.find = new google.maps.Geocoder()
 
   mapOptions =
     zoom:      16
-    center:    new google.maps.LatLng(-34.397, 150.644)
+    center:    new google.maps.LatLng(59.939, 30.312)
     mapTypeId: google.maps.MapTypeId.ROADMAP
 
   GMap.map  = new google.maps.Map document.getElementById("map-canvas"), mapOptions
-  GMap.find = new google.maps.Geocoder()
 
   GMap.on GMap.map, 'click', (e) ->
     GMap.clean()
     GMap.build_marker_group(e.latLng)
     
-    # GMap.find.geocode
-    #   latLng: e.latLng
-    # , (results, status) ->
-    #   log results
-
-# window.onload = ->
-#   script      = document.createElement("script")
-#   script.type = "text/javascript"
-#   script.src  = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCRaBh6UvqVRjILPDNwpZmamTkttZ6qvWU&sensor=false"
-#   document.body.appendChild(script)
+    GMap.find.geocode
+      latLng: e.latLng
+    , (results, status) ->
+      if status is google.maps.GeocoderStatus.OK
+        $('.sidebar').html (results.map (item) ->
+          "<p>#{item.formatted_address}</p>"
+        ).join ''
+      else
+        log "Geocode was not successful for the following reason: #{status}"

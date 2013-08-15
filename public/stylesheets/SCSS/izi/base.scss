@@ -1,70 +1,68 @@
+@import "compass/css3/box-sizing";
 $header_height: 100px;
 
 html, body{
   width:  100%;
   height: 100%;
-  background: gray;
+  background: red;
 }
 
 .viewport{
-  width:  100%;
-  height: 100%;
-  background: white;
-  position: relative;
-  
+  width:   100%;
+  height:  100%;
+  padding: 100px 0 100px 0;
+
+  background: blue;
+  @include box-sizing('padding-box');
+
   .header, .footer{
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    background: gray;
     position: absolute;
+    left: 0;
+    width: 100%;
     height: $header_height;
+    background: gray;
+    z-index: 2;
   }
 
   .header{ top:    0; }
   .footer{ bottom: 0; }
 
   .map_holder{
+    height:  100%;
+    margin-right: 200px;
+  }
+
+  .geocoder_holder{
+    height: 0;
+    top: 120px;
+    position: absolute;
+
+    z-index: 3;
     width: 100%;
-    height: 100%;
-    background: red;
-    position: relative;
+    text-align: center;
+    padding-right: 200px;
+    @include box-sizing('padding-box');
 
-    .geocoder_holder{
-      left: 10%;
-      z-index: 3;
-
-      position: absolute;
-      top: $header_height + 15px;
-      
-      .search_form{
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-      }
-    }
-
-    .map{
-      position: absolute;
-      top: $header_height; left: 0;
-      width: 100%; height: 80%;
+    .search_form{
+      padding: 20px;
+      display: inline;
+      background: white;
+      border-radius: 10px;
     }
   }
 
-  .sidebar{
-    position: absolute;
-    top: 0; right: 0;
-    z-index: 1;
+  .map{
     height:  100%;
-    width:   200px;
     background: green;
+  }
 
-    .content_holder{
-      width: 100%;
-      overflow: auto;
-      position: absolute;
-      background: lightGray;
-      top: $header_height; left: 0;
-    }
+  .sidebar{
+    z-index: 100;
+    float: right;
+    height: 100%;
+    width: 200px;
+    color: white;
+    overflow: auto;
+    background: black;
   }
 }

@@ -1,30 +1,5 @@
-class @Helper
-  @viewport_height = ->
-    wh = $(window).height()
-    hh = $('.header').height()
-    fh = $('.footer').height()
-    wh - hh - fh
-
-  @viewport_width = ->
-    $(window).width() - $('.sidebar').width()
-
-@scrollbar_toggle = ->
-  $('.content_holder').css
-    height: Helper.viewport_height()
-
-@goo_map_resize = ->
-  $('.map').css
-    height: Helper.viewport_height()
-    width:  Helper.viewport_width()
-
-@resize_basic_blocks = ->
-  goo_map_resize()
-  scrollbar_toggle()
-
 $ ->
   do initGMap
-  do resize_basic_blocks
-  $(window).resize -> do resize_basic_blocks
 
   $('.search_form').on 'click', '#find_it', ->
     input = $ '#address'
@@ -41,8 +16,15 @@ $ ->
           GMap.clean()
           GMap.map.setCenter position
           GMap.build_marker_group(position)
+          bound = GMap.bound_around_point(position, 100)
 
-          # GMap.find.geocode({})
-
+          GMap.find.geocode
+            latLng: position
+            bounds: bound
+          , (results, status) ->
+            if status is google.maps.GeocoderStatus.OK
+              $('.sidebar').html (results.map (item) ->
+                "<p>#{item.formatted_address}</p>"
+              ).join ''
       else
         log "Geocode was not successful for the following reason: #{status}"

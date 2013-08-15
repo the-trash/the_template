@@ -1,22 +1,25 @@
 html, body {
   width: 100%;
   height: 100%;
-  background: gray;
+  background: red;
 }
 
 .viewport {
   width: 100%;
   height: 100%;
-  background: white;
-  position: relative;
+  padding: 100px 0 100px 0;
+  background: blue;
+  -webkit-box-sizing: padding-box;
+  -moz-box-sizing: padding-box;
+  box-sizing: padding-box;
 }
 .viewport .header, .viewport .footer {
-  left: 0;
-  z-index: 2;
-  width: 100%;
-  background: gray;
   position: absolute;
+  left: 0;
+  width: 100%;
   height: 100px;
+  background: gray;
+  z-index: 2;
 }
 .viewport .header {
   top: 0;
@@ -25,43 +28,37 @@ html, body {
   bottom: 0;
 }
 .viewport .map_holder {
-  width: 100%;
   height: 100%;
-  background: red;
-  position: relative;
+  margin-right: 200px;
 }
-.viewport .map_holder .geocoder_holder {
-  left: 10%;
-  z-index: 3;
+.viewport .geocoder_holder {
+  height: 0;
+  top: 120px;
   position: absolute;
-  top: 115px;
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+  padding-right: 200px;
+  -webkit-box-sizing: padding-box;
+  -moz-box-sizing: padding-box;
+  box-sizing: padding-box;
 }
-.viewport .map_holder .geocoder_holder .search_form {
-  background: white;
+.viewport .geocoder_holder .search_form {
   padding: 20px;
+  display: inline;
+  background: white;
   border-radius: 10px;
 }
-.viewport .map_holder .map {
-  position: absolute;
-  top: 100px;
-  left: 0;
-  width: 100%;
-  height: 80%;
-}
-.viewport .sidebar {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
+.viewport .map {
   height: 100%;
-  width: 200px;
   background: green;
 }
-.viewport .sidebar .content_holder {
-  width: 100%;
+.viewport .sidebar {
+  z-index: 100;
+  float: right;
+  height: 100%;
+  width: 200px;
+  color: white;
   overflow: auto;
-  position: absolute;
-  background: lightGray;
-  top: 100px;
-  left: 0;
+  background: black;
 }
