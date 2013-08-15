@@ -13,12 +13,12 @@ html, body{
   position: relative;
   
   .header, .footer{
-    position: absolute;
     left: 0;
-    width: 100%;
-    height: $header_height;
-    background: gray;
     z-index: 2;
+    width: 100%;
+    background: gray;
+    position: absolute;
+    height: $header_height;
   }
 
   .header{ top:    0; }
@@ -27,9 +27,9 @@ html, body{
   .map_holder{
     width: 100%;
     height: 100%;
-    position: relative;
     background: red;
-    
+    position: relative;
+
     .geocoder_holder{
       left: 10%;
       z-index: 3;
@@ -47,17 +47,17 @@ html, body{
     .map{
       position: absolute;
       top: $header_height; left: 0;
-      width:  100%; height: 80%;
+      width: 100%; height: 80%;
     }
   }
 
   .sidebar{
     position: absolute;
     top: 0; right: 0;
-    width: 200px;
-    height: 100%;
-    background: green;
     z-index: 1;
+    height:  100%;
+    width:   200px;
+    background: green;
 
     .content_holder{
       width: 100%;

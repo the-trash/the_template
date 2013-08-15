@@ -1,0 +1,43 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+
+.viewport {
+  width: 100%;
+  height: 100%;
+  padding: 100px 0 100px 0;
+  background: blue;
+  -webkit-box-sizing: padding-box;
+  -moz-box-sizing: padding-box;
+  box-sizing: padding-box;
+}
+.viewport .header, .viewport .footer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: gray;
+  z-index: 2;
+}
+.viewport .header {
+  top: 0;
+}
+.viewport .footer {
+  bottom: 0;
+}
+.viewport .map {
+  height: 100%;
+  background: green;
+  margin-right: 200px;
+}
+.viewport .sidebar {
+  z-index: 100;
+  float: right;
+  height: 100%;
+  width: 200px;
+  color: white;
+  overflow: auto;
+  background: black;
+}

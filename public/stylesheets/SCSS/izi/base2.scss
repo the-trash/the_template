@@ -1,0 +1,45 @@
+@import "compass/css3/box-sizing";
+$header_height: 100px;
+
+html, body{
+  width:  100%;
+  height: 100%;
+  background: red;
+}
+
+.viewport{
+  width:   100%;
+  height:  100%;
+  padding: 100px 0 100px 0;
+
+  background: blue;
+  @include box-sizing('padding-box');
+
+  .header, .footer{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: $header_height;
+    background: gray;
+    z-index: 2;
+  }
+
+  .header{ top:    0; }
+  .footer{ bottom: 0; }
+
+  .map{
+    height:  100%;
+    background: green;
+    margin-right: 200px;
+  }
+
+  .sidebar{
+    z-index: 100;
+    float: right;
+    height: 100%;
+    width: 200px;
+    color: white;
+    overflow: auto;
+    background: black;
+  }
+}
