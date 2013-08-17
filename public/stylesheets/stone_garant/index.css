@@ -118,9 +118,8 @@
 }
 
 .main_banner {
-  height: 500px;
   z-index: 3;
-  /*background: image-url('/images/granit_bg.jpg') repeat scroll 0 0 #393A3C;*/
+  height: 500px;
 }
 .main_banner .title {
   font-size: 4em;
@@ -227,7 +226,6 @@
 .advantages ul li {
   float: left;
   width: 49.98%;
-  background: gray;
   position: relative;
 }
 .advantages ul li:before {
@@ -236,10 +234,21 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 }
 .advantages ul li:before {
-  background-image: url(/images/advantages_icons.png);
-  background-repeat: no-repeat;
+  background: url(/images/advantages_icons.png) no-repeat scroll 0 0 transparent;
+}
+.advantages ul li:nth-child(1):before {
+  background-position: 0 0;
+}
+.advantages ul li:nth-child(2):before {
+  background-position: -120px 0;
+}
+.advantages ul li:nth-child(3):before {
+  background-position: -240px 0;
+}
+.advantages ul li:nth-child(4):before {
+  background-position: -360px 0;
 }

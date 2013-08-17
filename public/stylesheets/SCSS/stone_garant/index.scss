@@ -114,17 +114,11 @@
 }
 
 .main_banner{
-  height: 500px;
   z-index: 3;
-  /*background: image-url('/images/granit_bg.jpg') repeat scroll 0 0 #393A3C;*/
+  height: 500px;
 
-  .title{
-    font-size:4em;
-  }
-
-  .descr{
-    font-size:2em;
-  }
+  .title{ font-size:4em; }
+  .descr{ font-size:2em; }
 
   .choose_goods{
     @include arial;
@@ -132,7 +126,6 @@
       0 1px 1px -1px white inset,
       0px 1px 4px -1px #010101
     );
-
     @include text-shadow(0.1px -0.1px 1px #222);
 
     position: absolute;
@@ -240,7 +233,6 @@
     li{
       float: left;
       width: 49.98%;
-      background: gray;
       position: relative;
 
       &:before{
@@ -249,26 +241,14 @@
 
         position: absolute;
         top: 0; left: 0;
-
-        width: 50px; height: 50px;
+        width: 60px; height: 60px;
       }
 
-      &:before{
-        background-image: image-url('/images/advantages_icons.png');
-        background-repeat: no-repeat;
-      }
-      &:nth-child(1):before{
-
-      }
-      &:nth-child(2):before{
-
-      }
-      &:nth-child(3):before{
-
-      }
-      &:nth-child(4):before{
-
-      }
+      &:before{ background: image-url('/images/advantages_icons.png') no-repeat scroll 0 0 transparent; }
+      &:nth-child(1):before{ background-position:      0 0; }
+      &:nth-child(2):before{ background-position: -120px 0; }
+      &:nth-child(3):before{ background-position: -240px 0; }
+      &:nth-child(4):before{ background-position: -360px 0; }
     }
   }
 }
