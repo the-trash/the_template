@@ -26,6 +26,17 @@ a{
 
 .mlr20{ margin: 0 20px; }
 
+.content_holder{
+  p.title{
+    padding-top: 30px;
+    font-size: 3.2em;
+    text-align: center;
+  }
+  h5.title{
+    font-size: 4em;
+  }
+}
+
 /* Base BG */
 .dark_gray_1 { background: #272a2d; }
 .dark_gray_2 { background: #28292e; }

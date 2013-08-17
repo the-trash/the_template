@@ -43,6 +43,15 @@ a:hover {
   margin: 0 20px;
 }
 
+.content_holder p.title {
+  padding-top: 30px;
+  font-size: 3.2em;
+  text-align: center;
+}
+.content_holder h5.title {
+  font-size: 4em;
+}
+
 /* Base BG */
 .dark_gray_1 {
   background: #272a2d;
