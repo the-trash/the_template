@@ -332,3 +332,36 @@
 .slider ul .author span:after {
   right: -65px;
 }
+
+.footer {
+  padding: 15px 0 40px 0;
+}
+.footer p {
+  padding: 0 0 15px 0;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid gray;
+}
+.footer li {
+  font-size: 1.3em;
+  line-height: 150%;
+  margin-right: 50px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+}
+
+.stone_garant_logo_2 {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  height: 60px;
+  width: 150px;
+  background: url(/images/stone_garant_logo_2.png) no-repeat scroll 0 0 transparent;
+}

@@ -12,6 +12,12 @@
   background: image-url('/images/stone_garant_logo.png') no-repeat scroll 0 15px transparent;
 }
 
+.stone_garant_logo_2{
+  @include inline-block;
+  height: 60px; width: 150px;
+  background: image-url('/images/stone_garant_logo_2.png') no-repeat scroll 0 0 transparent;
+}
+
 .index_header{
   @include arial;
   height: 50px;
@@ -311,5 +317,22 @@
         &:after { right: -65px; }
       }
     }
+  }
+}
+
+.footer{
+  padding: 15px 0 40px 0;
+  p{
+    padding: 0 0 15px 0;
+    margin:  0 0 20px 0;
+    border-bottom: 1px solid gray;
+  }
+
+  li{
+    font-size: 1.3em;
+    line-height: 150%;
+    margin-right: 50px;
+    @include inline-block;
+    vertical-align: top;
   }
 }

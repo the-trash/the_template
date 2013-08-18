@@ -110,16 +110,17 @@
     = link_to 'Читать все отзывы', '#', class: :feedback_list
 
 .content_line.dark_gray_2
-  .content_holder.index_footer
-    = link_to '', '#', class: :stone_garant_logo_2
-    
-    %ul
-      %li
-        © 2013 ООО «Риткам»
-      %li
-        185014, Республика Карелия, 
-        г. Петрозаводск, пр-т Лесной, д. 51, корп. 2
-      %li
-        8 800 333-08-31
-        %br
-        = mail_to 'info@stone-garant.ru'
+  .content_holder.footer
+    .mlr20
+      %p
+        = link_to '', '#', class: :stone_garant_logo_2
+      %ul
+        %li
+          © 2013 ООО «Риткам»
+        %li
+          185014, Республика Карелия, 
+          г. Петрозаводск, пр-т Лесной, д. 51, корп. 2
+        %li
+          8 800 333-08-31
+          %br
+          = mail_to 'info@stone-garant.ru'
