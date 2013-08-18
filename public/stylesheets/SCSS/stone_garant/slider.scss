@@ -1,0 +1,71 @@
+@import "../base/mix";
+@import "compass/css3/opacity";
+@import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
+@import "compass/css3/inline-block";
+
+.slider{
+  position: relative;
+  margin-bottom: 20px;
+
+  a.bck, a.fwd{
+    height:  80px;
+    width:   40px;
+    display: block;
+    text-decoration: none;
+    position: absolute; top: 10px;
+    background: image-url('/images/slider_btns.png') no-repeat scroll 0 0 transparent;
+  }
+  a.bck{
+    left: 20px;
+    &:hover{ background-position: 0 -102px; }
+  }
+  a.fwd{
+    right: 20px;
+    background-position: -80px 0;
+    &:hover{ background-position: -80px -102px; }
+  }
+
+  ul{
+    width: 80%;
+    margin: auto;
+    font-size: 0;
+    height: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+
+    li{
+      height: 100%;
+      width:  100%;
+      font-size: 10px;
+      text-align: left;
+      white-space: normal;
+      @include inline-block;
+    }
+
+    blockquote{
+      font-size: 1.5em;
+      line-height: 150%;
+      margin-bottom: 15px;
+    }
+
+    .author{
+      text-align: center;
+
+      span{
+        position: relative;
+
+        &:before, &:after{
+          width: 60px;
+          display: block;
+          content: ' ';
+          position: absolute;
+          top: 6px;
+          border-top: 1px solid gray;
+        }
+        &:before{ left:  -65px; }
+        &:after { right: -65px; }
+      }
+    }
+  }
+}

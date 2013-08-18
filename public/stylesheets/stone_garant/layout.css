@@ -97,3 +97,138 @@ a:hover {
 .light_gray_3 {
   color: #3e3932;
 }
+
+/* HEADER + FOOTER */
+.stone_garant_logo {
+  height: 70px;
+  width: 210px;
+  float: left;
+  display: block;
+  background: url(/images/stone_garant_logo.png) no-repeat scroll 0 15px transparent;
+}
+
+.stone_garant_logo_2 {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  height: 60px;
+  width: 150px;
+  background: url(/images/stone_garant_logo_2.png) no-repeat scroll 0 0 transparent;
+}
+
+.header {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 50px;
+}
+.header .description {
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  font-size: 1.4em;
+  border: 0px solid blue;
+}
+.header .phone {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  color: white;
+  font-size: 1.9em;
+  border: 0px solid red;
+}
+.header .recall {
+  position: absolute;
+  top: 20px;
+  right: 200px;
+}
+.header .recall a {
+  padding: 7px 15px;
+  color: #ededed;
+  font-size: 1.2em;
+  background: #434446;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.header .recall a:hover {
+  color: #c75a38;
+}
+
+.footer {
+  padding: 15px 0 40px 0;
+}
+.footer p {
+  padding: 0 0 15px 0;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid gray;
+}
+.footer li {
+  font-size: 1.3em;
+  line-height: 150%;
+  margin-right: 50px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+}
+
+/* NAVIGATION */
+.base_nav .menu {
+  font-family: Arial, Helvetica, sans-serif;
+  float: right;
+  padding-top: 35px;
+}
+.base_nav .menu a {
+  color: #010101;
+  font-size: 1.7em;
+  margin-left: 35px;
+  text-decoration: none;
+}
+.base_nav .menu a:hover {
+  text-decoration: underline;
+}
+
+.sections_nav a {
+  font-family: Arial, Helvetica, sans-serif;
+  float: left;
+  display: block;
+  padding: 0 15px;
+  height: 105px;
+  line-height: 160px;
+  margin-right: 20px;
+  color: white;
+  font-size: 1.4em;
+  border: 0px solid #f4f4f4;
+  background-image: url(/images/block_types.png);
+  background-position: 22px 22px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+.sections_nav a:nth-child(1) {
+  background-position: 22px 17px;
+}
+.sections_nav a:nth-child(2) {
+  background-position: 15px -103px;
+}
+.sections_nav a:nth-child(3) {
+  background-position: 22px -222px;
+}
+.sections_nav a:nth-child(4) {
+  background-position: 13px -341px;
+}
+.sections_nav a:nth-child(5) {
+  background-position: 28px -460px;
+}
+.sections_nav a:nth-child(6) {
+  background-position: 35px -581px;
+}
+.sections_nav .helper {
+  float: right;
+}
+.sections_nav .helper a {
+  margin: 0;
+}

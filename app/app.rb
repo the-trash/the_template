@@ -43,15 +43,19 @@ class MarkupTemplate < Padrino::Application
   end
 
   # Stone Garant
-  get '/stone_index' do
-    haml :stone_index, layout: :stone_garant
+  get '/' do
+    haml :"stone_garant/index", layout: :stone_garant
+  end
+
+  get '/catalog' do
+    haml :"stone_garant/catalog", layout: :stone_garant
+  end
+
+  get '/empty_tmpl' do
+    haml :"stone_garant/empty_tmpl", layout: :stone_garant
   end
 
   # Pages
-  get '/' do
-    haml :index
-  end
-
   get '/test_page' do
     haml :test_page, :locals => { :name => 'Sinatra Markup App' }
   end
