@@ -36,7 +36,6 @@ a:hover {
   margin: 0 auto;
   width: 1000px;
   position: relative;
-  border: 0px solid blue;
 }
 
 .mlr20 {
@@ -231,4 +230,37 @@ a:hover {
 }
 .sections_nav .helper a {
   margin: 0;
+}
+
+.help_bar {
+  padding: 30px 0;
+}
+.help_bar span {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  position: relative;
+  padding: 0 0 0 70px;
+  line-height: 60px;
+  font-size: 1.5em;
+}
+.help_bar span:before {
+  display: block;
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: url(/images/advantages_icons.png) no-repeat scroll -358px 0 transparent;
+}
+.help_bar .phone:before {
+  background-position: -478px 0;
+}
+.help_bar .delivery {
+  width: 50%;
 }

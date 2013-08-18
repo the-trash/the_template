@@ -1,5 +1,5 @@
 - content_for :css do
-  -# stylesheet_link_tag 'stone_garant/index'
+  = stylesheet_link_tag 'stone_garant/catalog'
 
 .content_line.dark_gray_1
   .content_holder.header
@@ -29,6 +29,12 @@
         = link_to 'Простые'
         = link_to 'Эксклюзивные'
         = link_to 'Комплектующие'
+
+.content_line.light_gray_1
+  .content_holder.help_bar
+    .mlr20
+      %span.delivery Бесплатная доставка по всей России
+      %span.phone Есть вопросы? Звоните <b>8 800 333-08-31</b>
 
 .content_line.dark_gray_2
   .content_holder.footer
