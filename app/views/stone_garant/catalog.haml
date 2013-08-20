@@ -30,6 +30,23 @@
         = link_to 'Эксклюзивные'
         = link_to 'Комплектующие'
 
+.content_line.light_gray_2
+  .content_holder.catalog
+    %h1 Наиболее популярные
+    
+    %ul.cf
+      - 15.times do
+        %li
+          %a.image{ href: '#', style: "background-image: url(/images/catalog_1.png);" }
+          .info
+            = link_to 'Столп святого Петра', '#'
+            %b 21 999 р.
+        %li
+          %a.image{ href: '#', style: "background-image: url(/images/catalog_2.png);" }
+          .info
+            = link_to 'Плита Архангела', '#'
+            %b 39 999 р.
+
 .content_line.light_gray_1
   .content_holder.help_bar
     .mlr20
