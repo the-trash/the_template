@@ -14,6 +14,24 @@ a{
   &:hover{ text-decoration: none; }
 }
 
+a.back_link{
+  color: black;
+  font-size: 1.2em;
+  position: absolute;
+  top: 30px; left: 0;
+  text-decoration: none;
+  padding-left: 25px;
+  &:hover{ color: #c75a38; }
+
+  &:before{
+    position: absolute;
+    top: -1px; left: 0;
+    content: '←';
+    font-size: 2.1em;
+    font-weight: bold;
+  }
+}
+
 /* Structure */
 .content_line{
   border: 0px solid red;
@@ -30,6 +48,8 @@ a{
 .mlr20{ margin: 0 20px; }
 
 .content_holder{
+  position: relative;
+
   p.title{
     padding-top: 30px;
     font-size: 3.2em;

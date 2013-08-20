@@ -51,6 +51,10 @@ class MarkupTemplate < Padrino::Application
     haml :"stone_garant/catalog", layout: :stone_garant
   end
 
+  get '/product' do
+    haml :"stone_garant/product", layout: :stone_garant
+  end
+
   get '/empty_tmpl' do
     haml :"stone_garant/empty_tmpl", layout: :stone_garant
   end

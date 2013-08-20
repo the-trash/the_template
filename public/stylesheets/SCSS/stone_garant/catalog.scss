@@ -1,1 +1,66 @@
+@import "../base/mix";
+@import "compass/css3/opacity";
+@import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
 @import "compass/css3/inline-block";
+
+h1{
+  color: black;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid #272a2d;
+  margin-bottom: 20px;
+}
+
+.product{
+  padding-bottom: 30px;
+
+  dl{
+    font-size: 1.5em;
+    line-height: 150%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid gray;
+
+    dt{
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    dd{ margin-bottom: 30px; }
+  }
+
+  .preview{
+    width: 240px;
+    float: left;
+  }
+
+  .finished{
+    padding: 20px;
+    float: right;
+    width: 200px;
+    height: 400px;
+    background: #f6f6f4;
+    h5{ font-weight: bold; }
+  }
+
+  .info{
+    margin: 0 260px;
+  }
+}
+
+.buy_link{
+  @include arial;
+  @include box-shadow(
+    0 1px 1px -1px white inset,
+    0px 1px 4px -1px #010101
+  );
+
+  @include text-shadow(0.1px -0.1px 1px #222);
+  
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  line-height: 40px;
+  border-radius: 3px;
+  background: #c85b39;
+}

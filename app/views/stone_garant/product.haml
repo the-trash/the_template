@@ -1,0 +1,76 @@
+- content_for :css do
+  = stylesheet_link_tag 'stone_garant/catalog'
+
+.content_line.dark_gray_1
+  .content_holder.header
+    .description Памятники из черного гранита с доставкой по всей России
+    .phone 8 800 333-08-31
+    .recall= link_to 'Вам перезвонить?', '#'
+
+.content_line.light_gray_1
+  .content_holder.base_nav.cf
+    .mlr20
+      = link_to '', '#', class: :stone_garant_logo
+      .menu
+        = link_to 'Продукция', '/catalog'
+        = link_to 'Компания'
+        = link_to 'Работы'
+        = link_to 'Услуги'
+        = link_to 'Акции'
+        = link_to 'Контакты'
+
+.content_line.dark_gray_1
+  .content_holder.sections_nav.cf
+    .mlr20
+      .sections
+        = link_to 'Одинарные'
+        = link_to 'Двойные'
+        = link_to 'С крестами'
+        = link_to 'Простые'
+        = link_to 'Эксклюзивные'
+        = link_to 'Комплектующие'
+
+.content_line.light_gray_2
+  .content_holder
+    = link_to "Вернуться к списку товаров", '#', class: :back_link
+    %h1 Гранитный памятник "Песня орфея"
+
+    .mlr20
+      .product.cf
+        .preview
+          = image_tag "/images/product_1.png"
+        .finished
+          %h5 Готовые работы
+
+        .info
+          %dl
+            %dt Комплект
+            %dd стела, подставка, цветник
+            %dt Размеры товара
+            %dd 99х99х99
+            %dt Описание товара
+            %dd Мы специализируемся на изготовлении надгробных сооружений, памятников, стел, мемориальных комплексов по типовым проектам, либо по эскизам заказчика.
+
+          = link_to "Рассчитать заказ", '#', class: :buy_link
+
+.content_line.light_gray_1
+  .content_holder.help_bar
+    .mlr20
+      %span.delivery Бесплатная доставка по всей России
+      %span.phone Есть вопросы? Звоните <b>8 800 333-08-31</b>
+
+.content_line.dark_gray_2
+  .content_holder.footer
+    .mlr20
+      %p
+        = link_to '', '#', class: :stone_garant_logo_2
+      %ul
+        %li
+          © 2013 ООО «Риткам»
+        %li
+          185014, Республика Карелия, 
+          г. Петрозаводск, пр-т Лесной, д. 51, корп. 2
+        %li
+          8 800 333-08-31
+          %br
+          = mail_to 'info@stone-garant.ru'
