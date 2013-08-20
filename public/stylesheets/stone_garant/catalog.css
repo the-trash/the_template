@@ -57,6 +57,36 @@ h1 {
   margin: 0 260px;
 }
 
+.product_info {
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.product_info .tabs a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  color: black;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px;
+  background: gray;
+  margin-right: 10px;
+}
+.product_info .tabs a.active {
+  background: white;
+}
+.product_info .content {
+  padding: 20px;
+  background: white;
+}
+.product_info p {
+  font-size: 1.4em;
+}
+
 .buy_link {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-box-shadow: 0 1px 1px -1px white inset, 0px 1px 4px -1px #010101;

@@ -48,6 +48,32 @@ h1{
   }
 }
 
+.product_info{
+  padding-top: 30px;
+  margin-bottom: 30px;
+
+  .tabs{
+    a{
+      @include inline-block;
+      color: black;
+      font-size: 1.3em;
+      font-weight: bold;
+      text-decoration: none;
+
+      padding: 15px;
+      background: gray;
+      margin-right: 10px;
+
+      &.active{ background: white; }
+    }
+  }
+  .content{
+    padding: 20px;
+    background: white;
+  }
+  p{ font-size: 1.4em; }
+}
+
 .buy_link{
   @include arial;
   @include box-shadow(
