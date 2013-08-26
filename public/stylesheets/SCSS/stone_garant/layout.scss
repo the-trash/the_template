@@ -37,7 +37,7 @@ a.back_link{
   border: 0px solid red;
 
   .content_holder{
-    @include arial;
+    
 
     margin: 0 auto;
     width:  1000px;
@@ -93,24 +93,33 @@ a.back_link{
 }
 
 .header{
-  @include arial;
   height: 50px;
 
   .description{
+    @include museo_font;
+    font-size: 1.4em;
     position: absolute;
     top: 17px; left: 20px;
-
-    font-size: 1.4em;
-    border: 0px solid blue;
   }
   .phone{
     position: absolute;
-    top: 16px; right: 20px;
+    top: 19px; right: 20px;
 
     color: white;
-    font-size: 1.9em;
-    border: 0px solid red;
+    font-size: 1.55em;
+    font-weight: bold;
+
+    &:before{
+      position: absolute;
+      top: -2px; left: -23px;
+
+      display: block;
+      content: ' ';
+      width: 20px; height: 20px;
+      background: url('/images/phone.png') no-repeat scroll 0 0 transparent;
+    }
   }
+
   .recall{
     position: absolute;
     top: 20px; right: 200px;
@@ -148,24 +157,29 @@ a.back_link{
 
 .base_nav{
   .menu{
-    @include arial;
     float: right;
-    padding-top: 35px;
+    font-weight: bold;
+    padding-top: 36px;
 
     a{
       color: #010101;
-      font-size: 1.7em;
-      margin-left: 35px;
+      font-size: 1.55em;
+      font-variant: inherit;
+      margin-left: 25px;
       text-decoration: none;
-      
-      &:hover{ text-decoration: underline; }
+      text-transform: uppercase;
+
+      &:hover{
+        color: #C85B39;
+        text-decoration: none;
+      }
     }
   }
 }
 
 .sections_nav{
   a{
-    @include arial;
+    
 
     float: left;
     display: block;

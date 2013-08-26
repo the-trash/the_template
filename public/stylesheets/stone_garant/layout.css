@@ -72,7 +72,6 @@ a.back_link:before {
   border: 0px solid red;
 }
 .content_line .content_holder {
-  font-family: Arial, Helvetica, sans-serif;
   margin: 0 auto;
   width: 1000px;
   position: relative;
@@ -162,23 +161,32 @@ a.back_link:before {
 }
 
 .header {
-  font-family: Arial, Helvetica, sans-serif;
   height: 50px;
 }
 .header .description {
+  font-family: "museo_1", "museo_2", sans-serif, Helvetica, Arial;
+  font-size: 1.4em;
   position: absolute;
   top: 17px;
   left: 20px;
-  font-size: 1.4em;
-  border: 0px solid blue;
 }
 .header .phone {
   position: absolute;
-  top: 16px;
+  top: 19px;
   right: 20px;
   color: white;
-  font-size: 1.9em;
-  border: 0px solid red;
+  font-size: 1.55em;
+  font-weight: bold;
+}
+.header .phone:before {
+  position: absolute;
+  top: -2px;
+  left: -23px;
+  display: block;
+  content: ' ';
+  width: 20px;
+  height: 20px;
+  background: url("/images/phone.png") no-repeat scroll 0 0 transparent;
 }
 .header .recall {
   position: absolute;
@@ -220,22 +228,24 @@ a.back_link:before {
 
 /* NAVIGATION */
 .base_nav .menu {
-  font-family: Arial, Helvetica, sans-serif;
   float: right;
-  padding-top: 35px;
+  font-weight: bold;
+  padding-top: 36px;
 }
 .base_nav .menu a {
   color: #010101;
-  font-size: 1.7em;
-  margin-left: 35px;
+  font-size: 1.55em;
+  font-variant: inherit;
+  margin-left: 25px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 .base_nav .menu a:hover {
-  text-decoration: underline;
+  color: #C85B39;
+  text-decoration: none;
 }
 
 .sections_nav a {
-  font-family: Arial, Helvetica, sans-serif;
   float: left;
   display: block;
   padding: 0 15px;
