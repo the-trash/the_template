@@ -1,3 +1,37 @@
+@font-face {
+  font-family: 'museo_1';
+  src: url("/fonts/museo_1/font.eot");
+  src: url("/fonts/museo_1/font.eot?#iefix") format("embedded-opentype"), url("/fonts/museo_1/font.woff") format("woff"), url("/fonts/museo_1/font.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'museo_2';
+  src: url("/fonts/museo_2/font.eot");
+  src: url("/fonts/museo_2/font.eot?#iefix") format("embedded-opentype"), url("/fonts/museo_2/font.woff") format("woff"), url("/fonts/museo_2/font.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'pt_suns_regular';
+  src: url("/fonts/pt_suns_regular/font.eot");
+  src: url("/fonts/pt_suns_regular/font.eot?#iefix") format("embedded-opentype"), url("/fonts/pt_suns_regular/font.woff") format("woff"), url("/fonts/pt_suns_regular/font.ttf") format("truetype");
+}
+
+/*@mixin inline-block{
+  display: inline-block;
+  *display: inline;
+  zoom: 1
+}*/
+/* for sliders building */
+/* no text elements select */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0){
+  .class{
+   .element{
+     display: inline-table;
+   }
+  }
+}
+*/
 /*
   zykin-ilya@ya.ru
   github.com/the-teacher
@@ -25,6 +59,7 @@ ol, p, pre, table, ul {
   line-height: 100%;
   background: transparent;
   vertical-align: baseline;
+  font-family: "pt_suns_regular", sans-serif, Helvetica, Arial;
 }
 
 html {

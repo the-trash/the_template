@@ -1,8 +1,35 @@
 @import "compass/css3/inline-block";
 
-@mixin corp_font  { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; }
-@mixin corp_font2 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 400; }
-@mixin corp_font3 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 600; }
+@font-face {
+  font-family: 'museo_1';
+  src: url('/fonts/museo_1/font.eot');
+  src: url('/fonts/museo_1/font.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/museo_1/font.woff')       format('woff'),
+       url('/fonts/museo_1/font.ttf')        format('truetype');
+}
+
+@font-face {
+  font-family: 'museo_2';
+  src: url('/fonts/museo_2/font.eot');
+  src: url('/fonts/museo_2/font.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/museo_2/font.woff')       format('woff'),
+       url('/fonts/museo_2/font.ttf')        format('truetype');
+}
+
+@font-face {
+  font-family: 'pt_suns_regular';
+  src: url('/fonts/pt_suns_regular/font.eot');
+  src: url('/fonts/pt_suns_regular/font.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/pt_suns_regular/font.woff')       format('woff'),
+       url('/fonts/pt_suns_regular/font.ttf')        format('truetype');
+}
+
+@mixin corp_font    { font-family: "pt_suns_regular", sans-serif, Helvetica, Arial;    }
+@mixin pts_font     { font-family: "pt_suns_regular", sans-serif, Helvetica, Arial;    }
+@mixin mudeo_1_font { font-family: "museo_1", sans-serif, Helvetica, Arial;            }
+@mixin museo_2_font { font-family: "museo_2", sans-serif, Helvetica, Arial;            }
+@mixin museo_font   { font-family: "museo_1", "museo_2", sans-serif, Helvetica, Arial; }
+
 @mixin corp_light { font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif; font-weight: 100; }
 @mixin treb_ms    { font-family: 'Trebuchet MS', Helvetica, sans-serif }
 @mixin arial      { font-family: Arial, Helvetica, sans-serif          }

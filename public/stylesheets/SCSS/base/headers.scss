@@ -1,7 +1,7 @@
 @import "mix";
 
 h1,h2,h3,h4,h5,h6{
-  @include arial;
+  @include museo_font;
   line-height: 100%;
   font-weight: normal;
   margin-bottom: 15px;
