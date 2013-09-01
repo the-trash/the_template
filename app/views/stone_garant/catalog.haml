@@ -25,7 +25,7 @@
       .sections
         = link_to 'Одинарные'
         = link_to 'Двойные'
-        = link_to 'С крестами'
+        = link_to 'С крестами', class: :current
         = link_to 'Простые'
         = link_to 'Эксклюзивные'
         = link_to 'Комплектующие'
@@ -41,11 +41,32 @@
           .info
             = link_to 'Столп святого Петра', '#'
             %b 21 999 р.
+          .hover_block
+            .wrp
+              .title Фигурный памятник 12
+              .name Каменный цветок 2
+              .marker &diams;
+              .price 21 999 р.
+              .equip
+                %b комплект
+                стела, подставка, цветник
+
+              = link_to 'Смотреть подробности', '#'
         %li
           %a.image{ href: '#', style: "background-image: url(/images/catalog_2.png);" }
           .info
             = link_to 'Плита Архангела', '#'
             %b 39 999 р.
+          .hover_block
+            .wrp
+              .title Фигурный памятник 12
+              .name Каменный цветок 2
+              .marker &diams;
+              .price 21 999 р.
+              .equip
+                %b комплект
+                стела, подставка, цветник
+              = link_to 'Смотреть подробности', '#'
 
 .content_line.light_gray_1
   .content_holder.help_bar

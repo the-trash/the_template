@@ -66,16 +66,119 @@ h1 {
   background-position: center bottom;
 }
 .catalog ul li .info {
+  font-family: "museo_1", "museo_2", sans-serif, Helvetica, Arial;
   width: 100%;
   position: absolute;
   left: 0;
   bottom: 0;
 }
+.catalog ul li .info a {
+  text-decoration: none;
+}
 .catalog ul li .info a, .catalog ul li .info b {
+  color: black;
   display: block;
-  font-size: 1.4em;
+  font-size: 1.6em;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+}
+.catalog ul li .hover_block {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background: #272a2d;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.catalog ul li .hover_block .wrp {
+  width: 227px;
+  height: 250px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 1px solid #a0a0a0;
+}
+.catalog ul li .hover_block a, .catalog ul li .hover_block .title, .catalog ul li .hover_block .name, .catalog ul li .hover_block .price, .catalog ul li .hover_block .equip, .catalog ul li .hover_block .marker {
+  left: 0;
+  width: 100%;
+  color: white;
+  display: block;
+  position: absolute;
+  text-align: center;
+  font-family: "museo_1", "museo_2", sans-serif, Helvetica, Arial;
+}
+.catalog ul li .hover_block .title {
+  top: 20px;
+  color: #a0a0a0;
+}
+.catalog ul li .hover_block .name {
+  top: 43px;
+  font-size: 1.3em;
+}
+.catalog ul li .hover_block .marker {
+  font-size: 1.5em;
+  height: 30px;
+  top: 72px;
+}
+.catalog ul li .hover_block .marker:before, .catalog ul li .hover_block .marker:after {
+  border-top: 1px solid white;
+  position: absolute;
+  display: block;
+  content: " ";
+  width: 80px;
+  top: 7px;
+}
+.catalog ul li .hover_block .marker:before {
+  left: 25px;
+}
+.catalog ul li .hover_block .marker:after {
+  right: 25px;
+}
+.catalog ul li .hover_block .price {
+  font-size: 1.7em;
+  top: 100px;
+}
+.catalog ul li .hover_block .equip {
+  font-family: "pt_suns_regular", sans-serif, Helvetica, Arial;
+  top: 135px;
+  font-size: 1.1em;
+}
+.catalog ul li .hover_block .equip b {
+  color: #a0a0a0;
+  display: block;
+  margin-bottom: 5px;
+}
+.catalog ul li .hover_block a {
+  font-family: "pt_suns_regular", sans-serif, Helvetica, Arial;
+  width: 167px;
+  color: #c75a38;
+  font-size: 1.4em;
+  padding: 10px 15px;
+  bottom: 10px;
+  left: 13px;
+  border: 3px solid #c75a38;
+  text-decoration: none;
+  text-align: center;
+}
+.catalog ul li .hover_block a:hover {
+  color: white;
+  background: #c75a38;
+}
+.catalog ul li:hover .hover_block {
+  height: 270px;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: height;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  transition-property: height;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }
 
 .product {

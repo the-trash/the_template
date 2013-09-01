@@ -3,6 +3,7 @@
 @import "compass/css3/box-shadow";
 @import "compass/css3/text-shadow";
 @import "compass/css3/inline-block";
+@import "compass/css3/transition";
 
 h1{
   color: black;
@@ -37,15 +38,113 @@ h1{
         background-position: center bottom;
       }
       .info{
+        @include museo_font;
+
         width: 100%;
         position: absolute;
         left: 0; bottom: 0;
 
+        a{
+          text-decoration: none;
+        }
         a, b{
+          color: black;
           display: block;
-          font-size: 1.4em;
+          font-size: 1.6em;
           text-align: center;
-          margin-bottom: 10px;
+          margin-bottom: 12px;
+        }
+      }
+
+      .hover_block{
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        background: #272a2d;
+        position: absolute;
+        bottom: 0; left: 0;
+
+        .wrp{
+          width: 227px;
+          height: 250px;
+          position: absolute;
+          top: 10px; left: 10px;
+          border: 1px solid #a0a0a0;
+        }
+
+        a, .title, .name, .price, .equip, .marker{
+          left: 0;
+          width: 100%;
+          color: white;
+          display: block;
+          position: absolute;
+          text-align: center;
+          @include museo_font;
+        }
+
+        .title{
+          top: 20px;
+          color: #a0a0a0;
+        }
+        .name{
+          top: 43px;
+          font-size: 1.3em;
+        }
+        .marker{
+          font-size: 1.5em;
+          height: 30px;
+          top: 72px;
+
+          &:before, &:after{
+            border-top: 1px solid white;
+            position: absolute;
+            display: block;
+            content: " ";
+            width: 80px;
+            top: 7px;
+          }
+          &:before{ left: 25px; }
+          &:after{ right: 25px; }
+        }
+        .price{
+          font-size: 1.7em;
+          top: 100px;
+        }
+        .equip{
+          @include pts_font;
+          top: 135px;
+          font-size: 1.1em;
+
+          b{
+            color: #a0a0a0;
+            display: block;
+            margin-bottom: 5px;
+          }
+        }
+
+        a{
+          @include pts_font;
+          width: 167px;
+          color: #c75a38;
+          font-size: 1.4em;
+          padding: 10px 15px;
+          bottom: 10px; left: 13px;
+          border: 3px solid #c75a38;
+          text-decoration: none;
+          text-align: center;
+
+          &:hover{
+            color: white;
+            background: #c75a38;
+          }
+        }
+      }
+      &:hover{
+        .hover_block{
+          height: 270px;
+          @include transition-duration(.2s);
+          @include transition-property(height);
+          @include transition-timing-function(ease-in);
         }
       }
     }

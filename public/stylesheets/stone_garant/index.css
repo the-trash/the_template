@@ -32,6 +32,37 @@
   }
 }
 */
+.btn_link {
+  color: white;
+  padding: 0 30px;
+  font-size: 1.4em;
+  line-height: 40px;
+  border-radius: 3px;
+  background: #c85b39;
+  text-decoration: none;
+  font-family: "pt_suns_regular", sans-serif, Helvetica, Arial;
+  text-shadow: 0.1px -0.1px 1px #222222;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M0NTkzNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2QzNjIzZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c45937), color-stop(100%, #d3623e));
+  background-image: -webkit-linear-gradient(#c45937, #d3623e);
+  background-image: -moz-linear-gradient(#c45937, #d3623e);
+  background-image: -o-linear-gradient(#c45937, #d3623e);
+  background-image: linear-gradient(#c45937, #d3623e);
+  -webkit-box-shadow: 0 1px 1px -1px white inset, 0px 1px 4px -1px #010101;
+  -moz-box-shadow: 0 1px 1px -1px white inset, 0px 1px 4px -1px #010101;
+  box-shadow: 0 1px 1px -1px white inset, 0px 1px 4px -1px #010101;
+}
+.btn_link:hover {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2QzNjIzZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2M0NTkzNyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d3623e), color-stop(100%, #c45937));
+  background-image: -webkit-linear-gradient(#d3623e, #c45937);
+  background-image: -moz-linear-gradient(#d3623e, #c45937);
+  background-image: -o-linear-gradient(#d3623e, #c45937);
+  background-image: linear-gradient(#d3623e, #c45937);
+}
+
 .main_banner {
   z-index: 3;
   height: 500px;
@@ -50,25 +81,20 @@
   font-size: 2em;
 }
 .main_banner .choose_goods {
-  -webkit-box-shadow: 0 1px 1px -1px white inset, 0px 1px 4px -1px #010101;
-  -moz-box-shadow: 0 1px 1px -1px white inset, 0px 1px 4px -1px #010101;
-  box-shadow: 0 1px 1px -1px white inset, 0px 1px 4px -1px #010101;
-  text-shadow: 0.1px -0.1px 1px #222222;
   position: absolute;
   top: 280px;
   left: 30px;
-  color: white;
-  padding: 0 30px;
-  font-size: 1.2em;
-  line-height: 40px;
-  border-radius: 3px;
-  background: #c85b39;
 }
 .main_banner .helper {
+  font-family: "pt_suns_regular", sans-serif, Helvetica, Arial;
   position: absolute;
-  bottom: 30px;
+  bottom: 18px;
   left: 30px;
-  font-size: 1.3em;
+  color: white;
+  font-size: 1.4em;
+}
+.main_banner .helper a {
+  color: #b69874;
 }
 .main_banner .helper:before {
   content: ' ';
@@ -89,7 +115,7 @@
   right: -20px;
   height: 500px;
   width: 490px;
-  background: url(/images/dark_block.png) no-repeat scroll 0 -100px transparent;
+  background: url("/images/dark_block.png") no-repeat scroll 0 -100px transparent;
 }
 
 .quality {
@@ -106,7 +132,13 @@
   width: 420px;
   height: 320px;
   background: gray;
-  background: url(/images/middle_block_placeholder.png) no-repeat scroll center center transparent;
+  background: url("/images/middle_block_placeholder.png") no-repeat scroll center center transparent;
+}
+.quality .portfolio a {
+  padding: 1px 20px;
+  position: absolute;
+  top: 132px;
+  left: 130px;
 }
 .quality .etching {
   display: block;
@@ -121,7 +153,7 @@
   content: ' ';
   width: 70px;
   height: 50px;
-  background: url(/images/block_icon.png) no-repeat scroll top center transparent;
+  background: url("/images/block_icon.png") no-repeat scroll top center transparent;
 }
 
 .advantages {
@@ -129,8 +161,10 @@
   padding-bottom: 30px;
 }
 .advantages p {
+  color: #3e3932;
   font-size: 1.2em;
   margin-left: 80px;
+  line-height: 175%;
 }
 .advantages p b {
   display: block;
@@ -152,7 +186,7 @@
   height: 60px;
 }
 .advantages ul li:before {
-  background: url(/images/advantages_icons.png) no-repeat scroll 0 0 transparent;
+  background: url("/images/advantages_icons.png") no-repeat scroll 0 0 transparent;
 }
 .advantages ul li:nth-child(1):before {
   background-position: 0 0;
@@ -170,14 +204,22 @@
 .feedback {
   text-align: center;
   padding-bottom: 20px;
+  background: url("/images/curved_people.png") no-repeat scroll right bottom transparent;
 }
 
 .feedback_list {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
   padding: 7px 15px;
   color: #ededed;
   font-size: 1.2em;
   background: #434446;
   border-radius: 20px;
+  margin-bottom: 25px;
   text-decoration: none;
 }
 .feedback_list:hover {

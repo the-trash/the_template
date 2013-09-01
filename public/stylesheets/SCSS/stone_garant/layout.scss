@@ -14,6 +14,10 @@ a{
   &:hover{ text-decoration: none; }
 }
 
+.title{
+  @include museo_font;
+}
+
 a.back_link{
   color: black;
   font-size: 1.2em;
@@ -179,8 +183,6 @@ a.back_link{
 
 .sections_nav{
   a{
-    
-
     float: left;
     display: block;
     padding: 0 15px;
@@ -189,21 +191,46 @@ a.back_link{
     line-height: 160px;
     margin-right: 20px;
 
-    color: white;
+    color: #a0a0a0;
     font-size: 1.4em;
     border: 0px solid #f4f4f4;
+    text-decoration: none;
 
-    background-image: image-url('/images/block_types.png');
-    background-position: 22px 22px;
-    background-color: transparent;
-    background-repeat: no-repeat;
+    background: url('/images/block_types_horiz.png') no-repeat scroll 0 0 transparent;
 
-    &:nth-child(1){ background-position: 22px 17px;   }
-    &:nth-child(2){ background-position: 15px -103px; }
-    &:nth-child(3){ background-position: 22px -222px; }
-    &:nth-child(4){ background-position: 13px -341px; }
-    &:nth-child(5){ background-position: 28px -460px; }
-    &:nth-child(6){ background-position: 35px -581px; }
+    &.current{ color: #c75a38; }
+    &:hover  { color: white; text-decoration: none; }
+
+    &:nth-child(1){
+      background-position: 47px -257px;
+      &.current{ background-position: 47px -540px; }
+      &:hover{ background-position: 47px 24px; }
+    }
+    &:nth-child(2){
+      background-position: -78px -257px;
+      &.current{ background-position: -78px -540px; }
+      &:hover{ background-position: -78px 24px; }
+    }
+    &:nth-child(3){
+      background-position: -198px -257px;
+      &.current{ background-position: -198px -540px; }
+      &:hover{ background-position: -198px 24px; }
+    }
+    &:nth-child(4){
+      background-position: -336px -257px;
+      &.current{ background-position: -336px -540px; }
+      &:hover{ background-position: -336px 24px; }
+    }
+    &:nth-child(5){
+      background-position: -450px -257px;
+      &.current{ background-position: -450px -540px; }
+      &:hover{ background-position: -450px 24px; }
+    }
+    &:nth-child(6){
+      background-position: -596px -257px;
+      &.current{ background-position: -596px -540px; }
+      &:hover{ background-position: -596px 24px; }
+    }
   }
 
   .helper{
@@ -213,7 +240,10 @@ a.back_link{
 }
 
 .help_bar{
+  color: #5e5d5d;
   padding: 30px 0;
+
+  b{ color: black; }
 
   span{
     @include inline-block;
@@ -221,7 +251,7 @@ a.back_link{
     position: relative;
     padding: 0 0 0 70px; 
     line-height: 60px;
-    font-size: 1.5em;
+    font-size: 1.6em;
 
     &:before{
       display: block;

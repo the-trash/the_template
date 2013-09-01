@@ -1,8 +1,26 @@
 @import "../base/mix";
+@import "compass/css3/images";
 @import "compass/css3/opacity";
 @import "compass/css3/box-shadow";
 @import "compass/css3/text-shadow";
 @import "compass/css3/inline-block";
+$experimental-support-for-svg: true;
+
+.btn_link{
+    color: white;
+    padding: 0 30px;
+    font-size: 1.4em;
+    line-height: 40px;
+    border-radius: 3px;
+    background: #c85b39;
+    text-decoration: none;
+
+    @include pts_font;
+    @include text-shadow(0.1px -0.1px 1px #222);
+    @include background-image(linear-gradient(#c45937, #d3623e));
+    @include box-shadow(0 1px 1px -1px white inset, 0px 1px 4px -1px #010101);
+    &:hover{ @include background-image(linear-gradient(#d3623e, #c45937)); }
+}
 
 .main_banner{
   z-index: 3;
@@ -25,28 +43,22 @@
   }
 
   .choose_goods{
-    @include box-shadow(
-      0 1px 1px -1px white inset,
-      0px 1px 4px -1px #010101
-    );
-    @include text-shadow(0.1px -0.1px 1px #222);
-
     position: absolute;
     top: 280px; left: 30px;
-    
-    color: white;
-    padding: 0 30px;
-    font-size: 1.2em;
-    line-height: 40px;
-    border-radius: 3px;
-    background: #c85b39;
   }
 
   .helper{
-    position: absolute;
-    bottom: 30px; left: 30px;
+    @include pts_font;
 
-    font-size: 1.3em;
+    position: absolute;
+    bottom: 18px; left: 30px;
+
+    color: white;
+    font-size: 1.4em;
+
+    a{
+      color: #b69874;
+    }
 
     &:before{
       content: ' ';
@@ -70,7 +82,7 @@
     height: 500px;
     width: 490px;
 
-    background: image-url('/images/dark_block.png') no-repeat scroll 0 -100px transparent;
+    background: url('/images/dark_block.png') no-repeat scroll 0 -100px transparent;
   }
 }
 
@@ -89,7 +101,13 @@
     width: 420px; height: 320px;
 
     background: gray;
-    background: image-url('/images/middle_block_placeholder.png') no-repeat scroll center center transparent;
+    background: url('/images/middle_block_placeholder.png') no-repeat scroll center center transparent;
+
+    a{
+      padding: 1px 20px;
+      position: absolute;
+      top: 132px; left: 130px;
+    }
   }
 
   .etching{
@@ -105,19 +123,20 @@
       content: ' ';
       width: 70px;
       height: 50px;
-      background: image-url('/images/block_icon.png') no-repeat scroll top center transparent;
+      background: url('/images/block_icon.png') no-repeat scroll top center transparent;
     }
   }
 }
 
 .advantages{
-  
   padding-top: 80px;
   padding-bottom: 30px;
 
   p{
+    color: #3e3932;
     font-size: 1.2em;
     margin-left: 80px;
+    line-height: 175%;
 
     b{
       display: block;
@@ -141,7 +160,7 @@
         width: 60px; height: 60px;
       }
 
-      &:before{ background: image-url('/images/advantages_icons.png') no-repeat scroll 0 0 transparent; }
+      &:before{ background: url('/images/advantages_icons.png') no-repeat scroll 0 0 transparent; }
       &:nth-child(1):before{ background-position:      0 0; }
       &:nth-child(2):before{ background-position: -120px 0; }
       &:nth-child(3):before{ background-position: -240px 0; }
@@ -153,14 +172,19 @@
 .feedback{
   text-align: center;
   padding-bottom: 20px;
+  background: url('/images/curved_people.png') no-repeat scroll right bottom transparent;
 }
 
 .feedback_list{
+  @include inline-block;
+
   padding: 7px 15px;
   color: #ededed;
   font-size: 1.2em;
   background: #434446;
   border-radius: 20px;
+  margin-bottom: 25px;
   text-decoration: none;
+
   &:hover{ color: #c75a38; }
 }
