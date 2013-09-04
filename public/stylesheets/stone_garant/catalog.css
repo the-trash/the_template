@@ -49,7 +49,7 @@ h1 {
 .catalog ul li {
   float: left;
   width: 247px;
-  height: 380px;
+  height: 400px;
   overflow: hidden;
   position: relative;
   margin-bottom: 20px;
@@ -61,7 +61,7 @@ h1 {
   display: block;
   position: absolute;
   left: 0;
-  bottom: 50px;
+  bottom: 75px;
   background-repeat: no-repeat;
   background-position: center bottom;
 }
