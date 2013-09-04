@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'museo_1';
+  src: url("/fonts/museo_1/font.eot");
+  src: url("/fonts/museo_1/font.eot?#iefix") format("embedded-opentype"), url("/fonts/museo_1/font.woff") format("woff"), url("/fonts/museo_1/font.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'museo_2';
+  src: url("/fonts/museo_2/font.eot");
+  src: url("/fonts/museo_2/font.eot?#iefix") format("embedded-opentype"), url("/fonts/museo_2/font.woff") format("woff"), url("/fonts/museo_2/font.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'pt_suns_regular';
+  src: url("/fonts/pt_suns_regular/font.eot");
+  src: url("/fonts/pt_suns_regular/font.eot?#iefix") format("embedded-opentype"), url("/fonts/pt_suns_regular/font.woff") format("woff"), url("/fonts/pt_suns_regular/font.ttf") format("truetype");
+}
+
+/*@mixin inline-block{
+  display: inline-block;
+  *display: inline;
+  zoom: 1
+}*/
+/* for sliders building */
+/* no text elements select */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0){
+  .class{
+   .element{
+     display: inline-table;
+   }
+  }
+}
+*/
+.product {
+  padding-bottom: 30px;
+}
+.product dl {
+  font-size: 15px;
+  line-height: 150%;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid gray;
+}
+.product dl dt {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.product dl dd {
+  margin-bottom: 30px;
+}
+.product .preview {
+  width: 240px;
+  float: left;
+}
+.product .finished {
+  padding: 20px;
+  float: right;
+  width: 200px;
+  height: 400px;
+  background: #f6f6f4;
+}
+.product .finished h5 {
+  font-weight: bold;
+}
+.product .info {
+  margin: 0 260px;
+}
+
+.product_info {
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.product_info .tabs a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px;
+  background: gray;
+  margin-right: 10px;
+}
+.product_info .tabs a.active {
+  background: white;
+}
+.product_info .content {
+  padding: 20px;
+  background: white;
+}
+.product_info p {
+  font-size: 14px;
+}
+
+.order_calc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  padding: 10px 20px;
+}

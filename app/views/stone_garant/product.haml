@@ -1,5 +1,6 @@
 - content_for :css do
   = stylesheet_link_tag 'stone_garant/catalog'
+  = stylesheet_link_tag 'stone_garant/product'
 
 .content_line.dark_gray_1
   .content_holder.header
@@ -42,7 +43,7 @@
         .finished
           %h5 Готовые работы
 
-        .info
+        .info.user_content
           %dl
             %dt Комплект
             %dd стела, подставка, цветник
@@ -51,7 +52,7 @@
             %dt Описание товара
             %dd Мы специализируемся на изготовлении надгробных сооружений, памятников, стел, мемориальных комплексов по типовым проектам, либо по эскизам заказчика.
 
-          = link_to "Рассчитать заказ", '#', class: :buy_link
+          = link_to "Рассчитать заказ", '#', class: "btn_link order_calc"
 
       .product_info
         .tabs

@@ -6,22 +6,6 @@
 @import "compass/css3/inline-block";
 $experimental-support-for-svg: true;
 
-.btn_link{
-    color: white;
-    padding: 0 30px;
-    font-size: 1.4em;
-    line-height: 40px;
-    border-radius: 3px;
-    background: #c85b39;
-    text-decoration: none;
-
-    @include pts_font;
-    @include text-shadow(0.1px -0.1px 1px #222);
-    @include background-image(linear-gradient(#c45937, #d3623e));
-    @include box-shadow(0 1px 1px -1px white inset, 0px 1px 4px -1px #010101);
-    &:hover{ @include background-image(linear-gradient(#d3623e, #c45937)); }
-}
-
 .main_banner{
   z-index: 3;
   height: 500px;

@@ -1,0 +1,73 @@
+@import "../base/mix";
+@import "compass/css3/opacity";
+@import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
+@import "compass/css3/inline-block";
+
+.product{
+  padding-bottom: 30px;
+
+  dl{
+    font-size: 15px;
+    line-height: 150%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid gray;
+
+    dt{
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    dd{ margin-bottom: 30px; }
+  }
+
+  .preview{
+    width: 240px;
+    float: left;
+  }
+
+  .finished{
+    padding: 20px;
+    float: right;
+    width: 200px;
+    height: 400px;
+    background: #f6f6f4;
+    h5{ font-weight: bold; }
+  }
+
+  .info{
+    margin: 0 260px;
+  }
+}
+
+.product_info{
+  padding-top: 30px;
+  margin-bottom: 30px;
+
+  .tabs{
+    a{
+      @include inline-block;
+      color: black;
+      font-size: 13px;
+      font-weight: bold;
+      text-decoration: none;
+
+      padding: 15px;
+      background: gray;
+      margin-right: 10px;
+
+      &.active{ background: white; }
+    }
+  }
+  .content{
+    padding: 20px;
+    background: white;
+  }
+  p{ font-size: 14px; }
+}
+
+.order_calc{
+  @include arial;
+  font-size: 13px;
+  padding: 10px 20px;
+}

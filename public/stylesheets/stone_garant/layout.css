@@ -46,10 +46,7 @@ a:hover {
   text-decoration: none;
 }
 
-.title {
-  font-family: "museo_1", "museo_2", sans-serif, Helvetica, Arial;
-}
-
+/* Links */
 a.back_link {
   color: black;
   font-size: 1.2em;
@@ -69,6 +66,37 @@ a.back_link:before {
   content: '←';
   font-size: 2.1em;
   font-weight: bold;
+}
+
+.btn_link {
+  color: white;
+  padding: 0 30px;
+  font-size: 1.4em;
+  line-height: 40px;
+  border-radius: 3px;
+  background: #c85b39;
+  text-decoration: none;
+  font-family: "pt_suns_regular", sans-serif, Helvetica, Arial;
+  text-shadow: 0.1px -0.1px 1px #222222;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c45937), color-stop(100%, #d3623e));
+  background-image: -webkit-linear-gradient(#c45937, #d3623e);
+  background-image: -moz-linear-gradient(#c45937, #d3623e);
+  background-image: -o-linear-gradient(#c45937, #d3623e);
+  background-image: linear-gradient(#c45937, #d3623e);
+  -webkit-box-shadow: 0 1px 1px -1px white inset, 0px 1px 4px -1px #010101;
+  -moz-box-shadow: 0 1px 1px -1px white inset, 0px 1px 4px -1px #010101;
+  box-shadow: 0 1px 1px -1px white inset, 0px 1px 4px -1px #010101;
+}
+.btn_link:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d3623e), color-stop(100%, #c45937));
+  background-image: -webkit-linear-gradient(#d3623e, #c45937);
+  background-image: -moz-linear-gradient(#d3623e, #c45937);
+  background-image: -o-linear-gradient(#d3623e, #c45937);
+  background-image: linear-gradient(#d3623e, #c45937);
+}
+
+.title {
+  font-family: "museo_1", "museo_2", sans-serif, Helvetica, Arial;
 }
 
 /* Structure */
