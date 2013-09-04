@@ -3,7 +3,16 @@ p{
   line-height: 175%;
 }
 
+.content{
+  padding-bottom: 30px;
+}
+
 .user_content{
   font-size: 14px;
-  *{ font-size: inherit }
+  line-height: 150%;
+  
+  *{
+    font-size: inherit;
+    line-height: inherit;
+  }
 }

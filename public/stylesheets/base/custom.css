@@ -3,9 +3,15 @@ p {
   line-height: 175%;
 }
 
+.content {
+  padding-bottom: 30px;
+}
+
 .user_content {
   font-size: 14px;
+  line-height: 150%;
 }
 .user_content * {
   font-size: inherit;
+  line-height: inherit;
 }

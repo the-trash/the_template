@@ -47,16 +47,10 @@ class MarkupTemplate < Padrino::Application
     haml :"stone_garant/index", layout: :stone_garant
   end
 
-  get '/catalog' do
-    haml :"stone_garant/catalog", layout: :stone_garant
-  end
-
-  get '/product' do
-    haml :"stone_garant/product", layout: :stone_garant
-  end
-
-  get '/empty_tmpl' do
-    haml :"stone_garant/empty_tmpl", layout: :stone_garant
+  %w(catalog product content empty_tmpl).each do |page|
+    get "/#{page}" do
+      haml :"stone_garant/#{page}", layout: :stone_garant
+    end
   end
 
   # Pages
