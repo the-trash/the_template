@@ -130,9 +130,43 @@
   .main_image{
     float: left;
     width: 600px;
-    border: 1px solid red;
     text-align: center;
+    /*border: 1px solid red;*/
   }
+  .stone_sizes{
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*border: 1px solid red;*/
+
+    span{
+      margin: 0 30px;
+      position: relative;
+
+      &:before{
+        position: absolute;
+        top: -3px; left: -25px;
+        display: block;
+        content: '';
+        width: 20px;
+        height: 20px;
+        background: url('/images/sizes.png') no-repeat scroll 0 0 transparent;
+      }
+
+      &.long{
+        &:before{
+          background-position: -181px 0;
+        }        
+      }
+
+      &.width{
+        &:before{
+          background-position: -380px 0;
+        }        
+      }
+    }
+  }
+
   .params{
     float: left;
     border: 1px solid red;

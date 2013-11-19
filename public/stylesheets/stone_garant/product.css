@@ -159,8 +159,34 @@
 .product_data .main_image {
   float: left;
   width: 600px;
-  border: 1px solid red;
   text-align: center;
+  /*border: 1px solid red;*/
+}
+.product_data .stone_sizes {
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /*border: 1px solid red;*/
+}
+.product_data .stone_sizes span {
+  margin: 0 45px;
+  position: relative;
+}
+.product_data .stone_sizes span:before {
+  position: absolute;
+  top: -3px;
+  left: -25px;
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: url("/images/sizes.png") no-repeat scroll 0 0 transparent;
+}
+.product_data .stone_sizes span.long:before {
+  background-position: -181px 0;
+}
+.product_data .stone_sizes span.width:before {
+  background-position: -380px 0;
 }
 .product_data .params {
   float: left;
