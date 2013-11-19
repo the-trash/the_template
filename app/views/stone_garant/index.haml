@@ -16,12 +16,20 @@
     .mlr20
       = link_to '', '#', class: :stone_garant_logo
       .menu
-        = link_to 'Продукция', '/catalog'
-        = link_to 'Компания'
-        = link_to 'Работы'
-        = link_to 'Услуги'
-        = link_to 'Акции'
-        = link_to 'Контакты'
+        %ul
+          %li= link_to 'Продукция', '/catalog'
+          %li
+            = link_to 'Компания'
+            .submenu
+              %ol
+                %li= link_to 'О Компании'
+                %li= link_to 'Преимущества'
+                %li= link_to 'Отзывы'
+
+          %li= link_to 'Работы'
+          %li= link_to 'Услуги'
+          %li= link_to 'Акции'
+          %li= link_to 'Контакты'
 
 .content_line.dark_gray_4
   .content_holder.main_banner

@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Project requirements
 gem 'rake'
-gem 'therubyracer'
+# gem 'therubyracer'
 
 # Component requirements
 gem 'compass'
