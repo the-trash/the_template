@@ -4,6 +4,40 @@
 @import "compass/css3/text-shadow";
 @import "compass/css3/inline-block";
 
+.product_head{
+  height: 40px;
+  position: relative;
+  border-bottom: 2px solid #272a2d;
+  margin-bottom: 25px;
+
+  .beadcrumbs{
+    position: absolute;
+    top: 15px; left: 0;
+
+    a{
+      font-size: 12px;
+      margin-right: 20px;
+      position: relative;
+      text-decoration: none;
+      color: #777;
+
+      &:after{
+        color: #777;
+        position: absolute;
+        top: 4px; right: -15px;
+        font-size: 15px;
+        content: '>';
+      }
+      &:last-child{
+        &:after{ display: none; }
+      }
+
+      &.orange{ color: #c75a38; }
+      &.current{ color: black;  }
+    }
+  }
+}
+
 .product{
   padding-bottom: 30px;
 
@@ -70,4 +104,37 @@
   @include arial;
   font-size: 13px;
   padding: 10px 20px;
+}
+
+.product_data{
+  .preview{
+    float: left;
+    width: 50px;
+
+    a{
+      display: block;
+      text-align: center;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid transparent;
+
+      &:hover{
+        border-bottom: 2px solid #4f5153;
+      }
+
+      &.current{
+        border-bottom: 2px solid #c75b38;
+      }
+    }
+  }
+  .main_image{
+    float: left;
+    width: 600px;
+    border: 1px solid red;
+    text-align: center;
+  }
+  .params{
+    float: left;
+    border: 1px solid red;
+  }
 }

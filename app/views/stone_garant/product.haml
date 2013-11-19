@@ -13,18 +13,26 @@
     .mlr20
       = link_to '', '#', class: :stone_garant_logo
       .menu
-        = link_to 'Продукция', '/catalog'
-        = link_to 'Компания'
-        = link_to 'Работы'
-        = link_to 'Услуги'
-        = link_to 'Акции'
-        = link_to 'Контакты'
+        %ul
+          %li= link_to 'Продукция', '/catalog'
+          %li
+            = link_to 'Компания'
+            .submenu
+              %ol
+                %li= link_to 'О Компании'
+                %li= link_to 'Преимущества'
+                %li= link_to 'Отзывы'
+
+          %li= link_to 'Работы'
+          %li= link_to 'Услуги'
+          %li= link_to 'Акции'
+          %li= link_to 'Контакты'
 
 .content_line.dark_gray_1
   .content_holder.sections_nav.cf
     .mlr20
       .sections
-        = link_to 'Одинарные'
+        = link_to 'Одинарные', '#', class: :current
         = link_to 'Двойные'
         = link_to 'С крестами'
         = link_to 'Простые'
@@ -33,26 +41,30 @@
 
 .content_line.light_gray_2
   .content_holder
-    = link_to "Вернуться к списку товаров", '#', class: :back_link
-    %h1 Гранитный памятник "Песня орфея"
+    .product_head
+      .beadcrumbs
+        = link_to "Памятники", '#'
+        = link_to "Одинарные", '#', class: :orange
+        = link_to "Название памятника", '#', class: :current
+
+      = link_to "Вернуться к списку товаров", '#', class: :back_link
+
+      -# %h1.hidden Гранитный памятник "Песня орфея"
 
     .mlr20
       .product.cf
-        .preview
-          = image_tag "/images/product_1.png"
-        .finished
-          %h5 Готовые работы
-
-        .info.user_content
-          %dl
-            %dt Комплект
-            %dd стела, подставка, цветник
-            %dt Размеры товара
-            %dd 99х99х99
-            %dt Описание товара
-            %dd Мы специализируемся на изготовлении надгробных сооружений, памятников, стел, мемориальных комплексов по типовым проектам, либо по эскизам заказчика.
-
-          = link_to "Рассчитать заказ", '#', class: "btn_link order_calc"
+        .product_data
+          .preview
+            = link_to "", class: :current do
+              = image_tag "/images/stone_x.png"
+            = link_to "" do
+              = image_tag "/images/stone_x.png"
+            = link_to "" do
+              = image_tag "/images/stone_x.png"
+          .main_image
+            = image_tag "/images/stone_main_image.png"
+          .params
+            3
 
       .product_info
         .tabs
@@ -87,3 +99,22 @@
           8 800 333-08-31
           %br
           = mail_to 'info@stone-garant.ru'
+
+-# 
+  // Old version
+  .product.cf.hidden
+    .preview
+      = image_tag "/images/product_1.png"
+    .finished
+      %h5 Готовые работы
+
+    .info.user_content
+      %dl
+        %dt Комплект
+        %dd стела, подставка, цветник
+        %dt Размеры товара
+        %dd 99х99х99
+        %dt Описание товара
+        %dd Мы специализируемся на изготовлении надгробных сооружений, памятников, стел, мемориальных комплексов по типовым проектам, либо по эскизам заказчика.
+
+      = link_to "Рассчитать заказ", '#', class: "btn_link order_calc"

@@ -51,8 +51,8 @@ a.back_link {
   color: black;
   font-size: 1.2em;
   position: absolute;
-  top: 30px;
-  left: 0;
+  top: 15px;
+  right: 0;
   text-decoration: none;
   padding-left: 25px;
 }
